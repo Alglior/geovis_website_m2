@@ -66,37 +66,36 @@
         "interaction": 80
       }
     },
-    {
-      "id": 2,
-      "mode": "2d",
-      "title": "OpenStreetMap France",
-      "description": "Carte collaborative libre du territoire français avec des données détaillées sur les transports, commerces et services.",
-      "thumbnail": "/static/images/thumbnails/map-2.png",
-      "url": "https://www.openstreetmap.org/#map=6/46.449/2.210",
-      "category": "Navigation",
-      "difficulty": "Débutant",
-      "fonctionalites": [
-        "Navigation détaillée du territoire français",
-        "Couches personnalisables (transports, commerces, services)",
-        "Recherche d'adresses et de lieux",
-        "Itinéraires routiers et transports publics",
-        "Édition collaborative des données",
-        "Export de cartes"
-      ],
-      "analyse": "Plateforme collaborative offrant une richesse de données détaillées sur la France. Les scores Maceachren modérés (Communication: 60, Tâche: 40, Interaction: 50) reflètent son interface fonctionnelle mais moins sophistiquée. Excellente pour la navigation pratique et la découverte locale.",
-      "avis": "Carte communautaire très complète, parfaite pour la navigation et la découverte locale.",
-      "tags": [
-        "Navigation",
-        "France",
-        "Collaboratif",
-        "Transport"
-      ],
-      "maceachren": {
-        "communication": 60,
-        "task": 40,
-        "interaction": 50
-      }
-    },
+      {
+    "id": 2,
+    "mode": "2d",
+    "title": "Changement de population en Europe (2022-2023)",
+    "description": "Carte thématique montrant l'évolution démographique annuelle par pays. Elle met en lumière le contraste entre l'Europe de l'Ouest/Nord en croissance et l'Europe de l'Est/Sud en déclin, basée sur les données des Nations Unies (2024).",
+    "thumbnail": "/static/images/thumbnails/population_change_europe.png",
+    "url": "https://ourworldindata.org/data-insights/some-parts-of-europe-have-a-growing-population-while-others-are-shrinking",
+    "category": "Démographie",
+    "difficulty": "Débutant",
+    "fonctionalites": [
+      "Représentation choroplèthe binaire (Augmentation vs Diminution)",
+      "Comparaison instantanée des dynamiques régionales (Est vs Ouest)",
+      "Identification des crises démographiques (ex: Ukraine, Italie, Grèce)",
+      "Source de données faisant autorité (UN World Population Prospects 2024)",
+      "Visualisation simplifiée pour la communication grand public"
+    ],
+    "analyse": "Cette carte illustre une fracture démographique nette. La croissance à l'Ouest (France, Espagne, UK) est souvent portée par le solde migratoire, tandis que le déclin à l'Est (Roumanie, Bulgarie) et au Sud (Italie, Grèce) reflète un vieillissement de la population et une balance naturelle négative. Le cas de l'Ukraine et de la Russie souligne également l'impact des conflits et des déplacements de population massifs.",
+    "avis": "Une carte d'une efficacité redoutable pour comprendre les enjeux géopolitiques futurs de l'Europe. Elle simplifie des données complexes pour rendre la trajectoire du continent immédiatement lisible.",
+    "tags": [
+      "Démographie",
+      "Europe",
+      "Population",
+      "Our World in Data"
+    ],
+    "maceachren": {
+      "communication": 90,
+      "task": 30,
+      "interaction": 15
+    }
+  },
     {
       "id": 3,
       "mode": "interactive",
@@ -105,10 +104,25 @@
       "thumbnail": "/static/images/thumbnails/map-3.png",
       "images": [
         {
+          "url": "/static/images/radio/radio_globale.png",
+          "title": "Carte Globale"
+        },
+        {
+          "url": "/static/images/radio/radio_globale2.png",
+          "title": "Sélection d'une station"
+        },
+        {
+          "url": "/static/images/radio/radio_globale3.png",
+          "title": "Explorer"
+        },
+        {
+          "url": "/static/images/radio/radio.png",
+          "title": "Légende"
+        },
+        {
           "url": "/static/videos/radio_carte.webm",
           "title": "Globe Radio Garden",
           "type": "video"
-        
         }
       ],
       "url": "http://radio.garden/",

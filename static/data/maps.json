@@ -5,7 +5,7 @@
       "mode": "interactive",
       "title": "Carte Interactive du Climat Mondial",
       "description": [
-        "Une visualisation interactive des données climatiques mondiales avec des couches de température, précipitations et vent en temps réel.",
+        "Une visualisation interactive des données climatiques mondiales avec des couches de température, précipitations et vent presque en temps réel.",
         "Cette application permet d'explorer les phénomènes météorologiques à l'échelle planétaire grâce à des données satellite actualisées en continu.",
         "Les utilisateurs peuvent naviguer dans différentes couches atmosphériques et visualiser les courants océaniques, les vents, les températures et bien plus encore."
       ],
@@ -57,7 +57,6 @@
       ],
       "tags": [
         "Climat",
-        "Temps réel",
         "Météo",
         "Global"
       ],
@@ -392,7 +391,6 @@
     "difficulty": "Intermédiaire",
     "auteur": "USGS",
     "fonctionalites": [
-      "Flux de données en temps réel avec option 'Auto Update'",
       "Filtrage multicritères avancé par magnitude (2.5+, 4.5+), période temporelle (1, 7 ou 30 jours) et importance des événements",
       "Gestion de couches SIG : Limites de plaques tectoniques, Densité de population, Failles et zones de risque aux USA",
       "Personnalisation de l'affichage : Fonds de carte (Satellite, Terrain, Street, Ocean, Grayscale) et unités de distance (Km/Miles)",
@@ -406,7 +404,6 @@
       "Séismes",
       "Tectonique des plaques",
       "USGS",
-      "Temps Réel",
       "Risques Majeurs"
     ],
     "maceachren": {

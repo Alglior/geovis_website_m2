@@ -1,6 +1,7 @@
 // Modal Component
 const MapModal = ({ map, isOpen, onClose }) => {
     const [viewerOpen, setViewerOpen] = React.useState(false);
+    const [selectedImageIndex, setSelectedImageIndex] = React.useState(0);
     const [showFirstTimeMessage2D, setShowFirstTimeMessage2D] = React.useState(false);
     const [showFirstTimeMessageInteractive, setShowFirstTimeMessageInteractive] = React.useState(false);
     
@@ -32,8 +33,9 @@ const MapModal = ({ map, isOpen, onClose }) => {
     
     if (!isOpen) return null;
 
-    const handleImageClick = () => {
+    const handleImageClick = (index = 0) => {
         if (map.images && map.images.length > 0) {
+            setSelectedImageIndex(index);
             setViewerOpen(true);
         }
     };
@@ -131,6 +133,7 @@ const MapModal = ({ map, isOpen, onClose }) => {
             images: map.mode === '2d' ? [{ url: map.thumbnail, title: map.title }] : map.images,
             map: map,
             onClose: () => setViewerOpen(false),
+            initialIndex: selectedImageIndex,
             key: 'image-viewer'
         }) : null,
         React.createElement('div', {
@@ -180,15 +183,41 @@ const MapModal = ({ map, isOpen, onClose }) => {
                         className: 'modal-gallery',
                         key: 'gallery'
                     }, map.images.map((img, index) => {
-                        const imgUrl = typeof img === 'string' ? img : img.url;
-                        return React.createElement('img', {
-                            src: imgUrl,
-                            alt: `${map.title} - Image ${index + 1}`,
-                            className: 'gallery-image',
-                            onClick: handleImageClick,
-                            key: `gallery-img-${index}`,
-                            title: 'Cliquer pour agrandir'
-                        });
+                        const mediaUrl = typeof img === 'string' ? img : img.url;
+                        const mediaType = typeof img === 'object' && img.type ? img.type : 
+                            (mediaUrl.split('.').pop().toLowerCase().match(/mp4|webm|ogg|mov|avi/) ? 'video' : 'image');
+                        
+                        if (mediaType === 'video') {
+                            return React.createElement('div', {
+                                className: 'gallery-video-container',
+                                onClick: () => handleImageClick(index),
+                                key: `gallery-video-${index}`,
+                                title: 'Cliquer pour voir la vidéo'
+                            }, [
+                                React.createElement('video', {
+                                    src: mediaUrl,
+                                    className: 'gallery-image',
+                                    key: 'video-element',
+                                    preload: 'metadata'
+                                }),
+                                React.createElement('div', {
+                                    className: 'video-play-overlay',
+                                    key: 'play-overlay'
+                                }, React.createElement('span', {
+                                    className: 'play-icon',
+                                    key: 'play-icon'
+                                }, '▶'))
+                            ]);
+                        } else {
+                            return React.createElement('img', {
+                                src: mediaUrl,
+                                alt: `${map.title} - Image ${index + 1}`,
+                                className: 'gallery-image',
+                                onClick: () => handleImageClick(index),
+                                key: `gallery-img-${index}`,
+                                title: 'Cliquer pour agrandir'
+                            });
+                        }
                     }))
                 ]) : null,
                 React.createElement('div', {

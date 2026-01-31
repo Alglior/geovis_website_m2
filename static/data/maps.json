@@ -353,34 +353,61 @@
     },
     {
       "id": 11,
-      "mode": "2d",
-      "title": "Migration des Animaux",
-      "description": "Suivi des migrations animales avec trajets GPS, espèces menacées et corridors écologiques.",
+      "mode": "interactive",
+      "title": "Movebank : Plateforme Mondiale de Télémétrie Animale",
+      "description": "Une infrastructure de données interactive gérée par l'Institut Max Planck, regroupant plus de 9,6 milliards de localisations GPS et capteurs. Elle permet de visualiser, gérer et analyser les déplacements de milliers d'espèces à travers le globe en temps réel et via des archives historiques.",
       "thumbnail": "/static/images/thumbnails/map-11.png",
-      "url": "https://www.movebank.org/",
-      "category": "Biologie",
+      "url": "https://www.movebank.org/cms/webapp?gwt_fragment=page=search_map",
+      "images": [
+        {
+          "url": "/static/images/animaux/carte_globale.png",
+          "title": "Carte Globale"
+        },
+        {
+          "url": "/static/images/animaux/filtre.png",
+          "title": "Filtre de Recherche"
+        },
+        {
+          "url": "/static/images/animaux/options.png",
+          "title": "Options"
+        },
+        {
+          "url": "/static/images/animaux/popup.png",
+          "title": "Pop-up d'Information"
+        },
+        {
+          "url": "/static/images/animaux/legend.png",
+          "title": "Légende"
+        },
+        {
+        "url": "/static/videos/animaux_migration_movebank.mp4",
+        "title": "Démonstration",
+        "type": "video"
+    }
+      ],
+      "category": "Biologie / Écologie",
       "difficulty": "Avancé",
       "fonctionalites": [
-        "Suivi GPS en temps réel des animaux",
-        "Trajectoires historiques détaillées",
-        "Identification des corridors écologiques",
-        "Données spécifiques par espèce",
-        "Analyse des patterns de migration",
-        "Alertes sur les espèces menacées",
-        "Collaboration scientifique et données ouvertes"
+        "Exploration interactive mondiale avec fonds de carte interchangeables (Satellite, Google, OpenLayers)",
+        "Moteur de recherche multicritères : par espèce (Taxon), par nom d'étude ou par type de capteur (GPS, Argos, Accéléromètre)",
+        "Système Env-DATA : annotation automatique des trajets avec des variables environnementales (vent, température, courants)",
+        "Gestion des droits d'accès : distinction claire entre consultation des résumés, visualisation des traces et téléchargement des données brutes",
+        "Intégration MoveApps : flux de travail (workflows) reproductibles pour l'analyse statistique et le filtrage des données (ex: filtre Douglas Argos)",
+        "Pop-ups d'information détaillés avec contacts des chercheurs et liens vers les publications scientifiques associées"
       ],
-      "analyse": "Plateforme de recherche scientifique de haut niveau pour l'écologie comportementale. Le score de tâche exceptionnellement élevé (80) reflète sa sophistication analytique. Combine données de biosurveillance avancées avec accessibilité pour la communauté scientifique et conservationnistes.",
-      "avis": "Fascinant de suivre les migrations animales. Excellent pour la recherche en écologie.",
+      "analyse": "Movebank n'est pas une simple carte, mais un écosystème de recherche. Son interface permet de passer de la vision globale (densité de points) à l'analyse comportementale individuelle. La force de l'outil réside dans sa capacité à standardiser des données hétérogènes (plus de 1 600 taxons) pour permettre des études comparatives sur l'impact du changement climatique ou des infrastructures humaines sur la faune.",
+      "avis": "L'outil ultime pour la conservation. La fluidité entre la visualisation cartographique et les outils d'analyse (MoveApps) en fait la référence mondiale. L'aspect collaboratif (DOI pour les données) garantit une science ouverte et rigoureuse.",
       "tags": [
         "Migration",
-        "Animaux",
-        "GPS",
-        "Écologie"
+        "Télémétrie GPS",
+        "Conservation",
+        "Écologie comportementale",
+        "Max Planck"
       ],
       "maceachren": {
-        "communication": 60,
-        "task": 80,
-        "interaction": 65
+        "communication": 65,
+        "task": 92,
+        "interaction": 88
       }
     },
     {

@@ -99,10 +99,18 @@
     },
     {
       "id": 3,
-      "mode": "2d",
+      "mode": "interactive",
       "title": "Radio Garden - Radios du Monde",
       "description": "Globe interactif 3D permettant d'écouter des milliers de stations de radio en direct à travers le monde entier.",
       "thumbnail": "/static/images/thumbnails/map-3.png",
+      "images": [
+        {
+          "url": "/static/videos/radio_carte.webm",
+          "title": "Globe Radio Garden",
+          "type": "video"
+        
+        }
+      ],
       "url": "http://radio.garden/",
       "category": "Technologie",
       "difficulty": "Débutant",

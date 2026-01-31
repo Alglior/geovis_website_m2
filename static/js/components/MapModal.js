@@ -1,20 +1,33 @@
 // Modal Component
 const MapModal = ({ map, isOpen, onClose }) => {
     const [viewerOpen, setViewerOpen] = React.useState(false);
-    const [showFirstTimeMessage, setShowFirstTimeMessage] = React.useState(false);
+    const [showFirstTimeMessage2D, setShowFirstTimeMessage2D] = React.useState(false);
+    const [showFirstTimeMessageInteractive, setShowFirstTimeMessageInteractive] = React.useState(false);
     
     React.useEffect(() => {
         if (isOpen) {
-            const hasSeenMessage = localStorage.getItem('hasSeenImageViewerMessage');
-            if (!hasSeenMessage && map.images && map.images.length > 0) {
-                setShowFirstTimeMessage(true);
+            if (map.mode === '2d') {
+                const hasSeenMessage2D = localStorage.getItem('hasSeenImageViewer2DMessage');
+                if (!hasSeenMessage2D) {
+                    setShowFirstTimeMessage2D(true);
+                }
+            } else {
+                const hasSeenMessageInteractive = localStorage.getItem('hasSeenImageViewerInteractiveMessage');
+                if (!hasSeenMessageInteractive && map.images && map.images.length > 0) {
+                    setShowFirstTimeMessageInteractive(true);
+                }
             }
         }
-    }, [isOpen, map.images]);
+    }, [isOpen, map.images, map.mode]);
 
-    const handleDontRemindAgain = () => {
-        localStorage.setItem('hasSeenImageViewerMessage', 'true');
-        setShowFirstTimeMessage(false);
+    const handleDontRemindAgain2D = () => {
+        localStorage.setItem('hasSeenImageViewer2DMessage', 'true');
+        setShowFirstTimeMessage2D(false);
+    };
+
+    const handleDontRemindAgainInteractive = () => {
+        localStorage.setItem('hasSeenImageViewerInteractiveMessage', 'true');
+        setShowFirstTimeMessageInteractive(false);
     };
     
     if (!isOpen) return null;
@@ -30,10 +43,10 @@ const MapModal = ({ map, isOpen, onClose }) => {
         onClick: onClose,
         key: 'backdrop'
     }, [
-        showFirstTimeMessage ? React.createElement('div', {
+        showFirstTimeMessage2D ? React.createElement('div', {
             className: 'first-time-message',
-            onClick: () => setShowFirstTimeMessage(false),
-            key: 'first-time-message'
+            onClick: () => setShowFirstTimeMessage2D(false),
+            key: 'first-time-message-2d'
         }, [
             React.createElement('div', {
                 className: 'first-time-message-content',
@@ -42,7 +55,49 @@ const MapModal = ({ map, isOpen, onClose }) => {
             }, [
                 React.createElement('button', {
                     className: 'message-close',
-                    onClick: () => setShowFirstTimeMessage(false),
+                    onClick: () => setShowFirstTimeMessage2D(false),
+                    key: 'close-message'
+                }, '×'),
+                React.createElement('div', {
+                    className: 'message-icon',
+                    key: 'icon'
+                }, '🖼️'),
+                React.createElement('h3', {
+                    key: 'title'
+                }, 'Visualiseur d\'images'),
+                React.createElement('p', {
+                    key: 'text'
+                }, 'Utilisez le bouton "🔍 Agrandir" ci-dessous pour voir la carte en très grand écran !'),
+                React.createElement('div', {
+                    className: 'message-buttons',
+                    key: 'buttons'
+                }, [
+                    React.createElement('button', {
+                        className: 'message-btn message-btn-primary',
+                        onClick: () => setShowFirstTimeMessage2D(false),
+                        key: 'ok-btn'
+                    }, 'D\'accord'),
+                    React.createElement('button', {
+                        className: 'message-btn message-btn-secondary',
+                        onClick: handleDontRemindAgain2D,
+                        key: 'dont-remind-btn'
+                    }, 'Ne plus me le rappeler')
+                ])
+            ])
+        ]) : null,
+        showFirstTimeMessageInteractive ? React.createElement('div', {
+            className: 'first-time-message',
+            onClick: () => setShowFirstTimeMessageInteractive(false),
+            key: 'first-time-message-interactive'
+        }, [
+            React.createElement('div', {
+                className: 'first-time-message-content',
+                onClick: (e) => e.stopPropagation(),
+                key: 'message-content'
+            }, [
+                React.createElement('button', {
+                    className: 'message-close',
+                    onClick: () => setShowFirstTimeMessageInteractive(false),
                     key: 'close-message'
                 }, '×'),
                 React.createElement('div', {
@@ -61,19 +116,20 @@ const MapModal = ({ map, isOpen, onClose }) => {
                 }, [
                     React.createElement('button', {
                         className: 'message-btn message-btn-primary',
-                        onClick: () => setShowFirstTimeMessage(false),
+                        onClick: () => setShowFirstTimeMessageInteractive(false),
                         key: 'ok-btn'
                     }, 'D\'accord'),
                     React.createElement('button', {
                         className: 'message-btn message-btn-secondary',
-                        onClick: handleDontRemindAgain,
+                        onClick: handleDontRemindAgainInteractive,
                         key: 'dont-remind-btn'
                     }, 'Ne plus me le rappeler')
                 ])
             ])
         ]) : null,
         viewerOpen ? React.createElement(ImageViewer, {
-            images: map.images,
+            images: map.mode === '2d' ? [{ url: map.thumbnail, title: map.title }] : map.images,
+            map: map,
             onClose: () => setViewerOpen(false),
             key: 'image-viewer'
         }) : null,
@@ -107,6 +163,12 @@ const MapModal = ({ map, isOpen, onClose }) => {
                     className: 'modal-image',
                     key: 'image'
                 }),
+                map.mode === '2d' && map.thumbnail ? React.createElement('button', {
+                    className: 'btn-enlarge-2d',
+                    onClick: () => setViewerOpen(true),
+                    key: 'enlarge-btn',
+                    title: 'Voir la carte en plus grand'
+                }, '🔍 Agrandir') : null,
                 map.images && map.images.length > 0 ? React.createElement('div', {
                     key: 'gallery-section'
                 }, [

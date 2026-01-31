@@ -2,6 +2,7 @@
   "maps": [
     {
       "id": 1,
+      "mode": "interactive",
       "title": "Carte Interactive du Climat Mondial",
       "description": [
         "Une visualisation interactive des données climatiques mondiales avec des couches de température, précipitations et vent en temps réel.",
@@ -68,6 +69,7 @@
     },
     {
       "id": 2,
+      "mode": "2d",
       "title": "OpenStreetMap France",
       "description": "Carte collaborative libre du territoire français avec des données détaillées sur les transports, commerces et services.",
       "thumbnail": "/static/images/thumbnails/map-2.png",
@@ -98,6 +100,7 @@
     },
     {
       "id": 3,
+      "mode": "2d",
       "title": "Radio Garden - Radios du Monde",
       "description": "Globe interactif 3D permettant d'écouter des milliers de stations de radio en direct à travers le monde entier.",
       "thumbnail": "/static/images/thumbnails/map-3.png",
@@ -128,6 +131,7 @@
     },
     {
       "id": 4,
+      "mode": "2d",
       "title": "Atlas Démographique Interactif",
       "description": "Analyse démographique mondiale avec pyramides des âges, migration et évolution de la population par pays.",
       "thumbnail": "/static/images/thumbnails/map-4.png",
@@ -158,6 +162,7 @@
     },
     {
       "id": 5,
+      "mode": "2d",
       "title": "Carte des Feux de Forêt en Temps Réel",
       "description": "Surveillance globale des incendies de forêt avec détection satellite et prévisions de propagation.",
       "thumbnail": "/static/images/thumbnails/map-5.png",
@@ -187,38 +192,42 @@
         "interaction": 65
       }
     },
-    {
-      "id": 6,
-      "title": "Commute time in Europe",
-      "description": "Une carte qui montre les temps de trajets domicile-travail en Europe avec les infrastructures de transport et l'accessibilité régionale.",
-      "thumbnail": "/static/images/thumbnails/commute-time-in-europe.png",
-      "url": "https://landgeist.com/2024/11/30/commute-time-in-europe/",
-      "category": "Transport",
-      "difficulty": "Débutant",
-      "fonctionalites": [
-        "Visualisation des temps de trajets par région",
-        "Code couleur pour les durées de trajet",
-        "Données d'accessibilité",
-        "Comparaison entre villes européennes",
-        "Informations sur les transports disponibles",
-        "Analyse des infrastructures"
-      ],
-      "analyse": "Analyse géospatiale de la mobilité européenne. Les données présentées offrent des insights sur l'accessibilité régionale et la qualité de vie. Cette cartographie illustre les inégalités d'accessibilité à travers le continent et leur impact sur les modes de vie urbains.",
-      "avis": "Fascinant pour les passionnés de géographie urbaine. Collection de données impressive sur les trajets européens.",
-      "tags": [
-        "Transport",
-        "Accessibilité",
-        "Europe",
-        "Urbanisme"
-      ],
-      "maceachren": {
-        "communication": 60,
-        "task": 65,
-        "interaction": 55
-      }
-    },
+    { 
+    "id": 6,
+    "mode": "2d",
+    "title": "Temps de trajet domicile-travail en Europe (Moyennes nationales)",
+    "description": "Carte choroplèthe illustrant le temps moyen de trajet aller simple par pays. Basée sur les données Eurostat, elle permet de visualiser les disparités de mobilité liées à la centralisation urbaine et à la géographie nationale.",
+    "thumbnail": "/static/images/thumbnails/commute-time-in-europe.png",
+    "url": "https://landgeist.com/2024/11/30/commute-time-in-europe/",
+    "category": "Transport / Qualité de vie",
+    "difficulty": "Débutant",
+    "auteur": "landgeist",
+    "sources": ["Eurostat"],
+    "fonctionalites": [
+      "Visualisation des moyennes de trajet par pays (et non par région)",
+      "Échelle de couleurs intuitive (gradient du jaune au rouge foncé)",
+      "Identification des extrêmes (Top 4 des trajets les plus longs et les plus courts)",
+      "Données temporelles agrégées en minutes (Aller simple)",
+      "Comparaison transfrontalière directe"
+    ],
+    "analyse": "Cette cartographie révèle l'impact de l'organisation territoriale sur le quotidien. On observe que les pays à forte centralisation économique (comme le Royaume-Uni avec Londres ou la Lettonie avec Riga) ou à forte congestion (Luxembourg) présentent les trajets les plus longs. À l'inverse, les économies insulaires ou moins denses (Islande, Chypre) sont les plus efficientes. Note critique : l'agrégation à l'échelle nationale masque les disparités massives entre métropoles saturées et zones rurales.",
+    "avis": "Un excellent outil de communication grand public qui rend des données statistiques abstraites immédiatement perceptibles. Le choix du rouge pour les temps longs active une réponse cognitive liée au stress, renforçant l'impact du message.",
+    "tags": [
+      "Transport",
+      "Mobilité",
+      "Europe",
+      "Eurostat",
+      "Qualité de vie"
+    ],
+    "maceachren": {
+      "communication": 85,
+      "task": 25,
+      "interaction": 0
+    }
+  },
     {
       "id": 7,
+      "mode": "2d",
       "title": "Pollution de l'Air Mondiale",
       "description": "Surveillance en temps réel de la qualité de l'air avec indices AQI, particules fines et prévisions.",
       "thumbnail": "/static/images/thumbnails/map-7.png",
@@ -249,6 +258,7 @@
     },
     {
       "id": 8,
+      "mode": "2d",
       "title": "Trafic Maritime Global",
       "description": "Visualisation en temps réel du trafic maritime mondial avec positions des navires et routes commerciales.",
       "thumbnail": "/static/images/thumbnails/map-8.png",
@@ -280,6 +290,7 @@
     },
     {
       "id": 9,
+      "mode": "2d",
       "title": "Villes et Urbanisation Mondiale",
       "description": "Visualisation de la croissance urbaine mondiale avec densité de population, mégalopoles et expansion des villes.",
       "thumbnail": "/static/images/thumbnails/map-9.png",
@@ -310,6 +321,7 @@
     },
     {
       "id": 10,
+      "mode": "2d",
       "title": "Séismes en Temps Réel",
       "description": "Monitoring global de l'activité sismique avec magnitude, profondeur et alertes tsunami.",
       "thumbnail": "/static/images/thumbnails/map-10.png",
@@ -341,6 +353,7 @@
     },
     {
       "id": 11,
+      "mode": "2d",
       "title": "Migration des Animaux",
       "description": "Suivi des migrations animales avec trajets GPS, espèces menacées et corridors écologiques.",
       "thumbnail": "/static/images/thumbnails/map-11.png",
@@ -372,6 +385,7 @@
     },
     {
       "id": 12,
+      "mode": "2d",
       "title": "Trafic Aérien en Direct",
       "description": "Suivi en temps réel des vols commerciaux et privés dans le monde entier avec informations détaillées sur chaque appareil.",
       "thumbnail": "/static/images/thumbnails/map-12.png",
@@ -403,6 +417,7 @@
     },
     {
       "id": 13,
+      "mode": "2d",
       "title": "Câbles Sous-Marins Internet",
       "description": "Carte interactive des câbles sous-marins qui transportent 99% du trafic internet intercontinental.",
       "thumbnail": "/static/images/thumbnails/map-13.png",
@@ -434,6 +449,7 @@
     },
     {
       "id": 14,
+      "mode": "2d",
       "title": "Déforestation dans le monde",
       "description": "Surveillance satellite de la déforestation dans le monde avec données historiques et alertes en temps réel.",
       "thumbnail": "/static/images/thumbnails/map-14.png",
@@ -465,6 +481,7 @@
     },
     {
       "id": 15,
+      "mode": "2d",
       "title": "Énergie Éolienne et Solaire",
       "description": "Carte mondiale des installations d'énergie renouvelable avec production en temps réel et statistiques.",
       "thumbnail": "/static/images/thumbnails/map-15.png",
@@ -496,6 +513,7 @@
     },
     {
       "id": 16,
+      "mode": "2d",
       "title": "Récifs Coralliens et Océans",
       "description": "Atlas interactif des récifs coralliens avec état de santé, blanchissement et biodiversité marine.",
       "thumbnail": "/static/images/thumbnails/map-16.png",
@@ -527,6 +545,7 @@
     },
     {
       "id": 17,
+      "mode": "2d",
       "title": "Éclairage Nocturne Mondial",
       "description": "Carte satellite de la pollution lumineuse mondiale montrant l'urbanisation et l'activité humaine nocturne.",
       "thumbnail": "/static/images/thumbnails/map-17.png",

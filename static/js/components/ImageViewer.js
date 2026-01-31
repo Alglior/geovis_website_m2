@@ -1,8 +1,11 @@
 // Image Viewer Component with Navigation
-const ImageViewer = ({ images, onClose }) => {
+const ImageViewer = ({ images, map, onClose }) => {
     const [currentIndex, setCurrentIndex] = React.useState(0);
 
     if (!images || images.length === 0) return null;
+
+    // Mode interactive: multiples images avec navigation
+    const isInteractiveMode = map && map.mode === 'interactive' && images.length > 1;
 
     // Fonction helper pour extraire l'URL et le titre
     const getImageUrl = (img) => typeof img === 'string' ? img : img.url;
@@ -51,25 +54,25 @@ const ImageViewer = ({ images, onClose }) => {
                 className: 'image-viewer-main',
                 key: 'main-image'
             }, [
-                currentTitle ? React.createElement('div', {
+                isInteractiveMode && currentTitle ? React.createElement('div', {
                     className: 'image-figure-title',
                     key: 'figure-title'
                 }, `Figure ${currentIndex + 1} : ${currentTitle}`) : null,
                 React.createElement('img', {
                     src: currentUrl,
                     alt: currentTitle || `Image ${currentIndex + 1}`,
-                    className: 'viewer-image',
+                    className: `viewer-image ${isInteractiveMode ? 'mode-interactive' : 'mode-2d'}`,
                     key: 'current-image'
                 }),
 
-                images.length > 1 ? React.createElement('button', {
+                isInteractiveMode && images.length > 1 ? React.createElement('button', {
                     className: 'viewer-nav viewer-prev',
                     onClick: handlePrev,
                     key: 'prev-btn',
                     title: 'Image précédente (←)'
                 }, '❮') : null,
 
-                images.length > 1 ? React.createElement('button', {
+                isInteractiveMode && images.length > 1 ? React.createElement('button', {
                     className: 'viewer-nav viewer-next',
                     onClick: handleNext,
                     key: 'next-btn',
@@ -77,7 +80,7 @@ const ImageViewer = ({ images, onClose }) => {
                 }, '❯') : null
             ]),
 
-            React.createElement('div', {
+            isInteractiveMode ? React.createElement('div', {
                 className: 'image-viewer-info',
                 key: 'info'
             }, [
@@ -98,7 +101,7 @@ const ImageViewer = ({ images, onClose }) => {
                         title: getImageTitle(img, index) || `Image ${index + 1}`
                     })
                 )) : null
-            ])
+            ]) : null
         ])
     ]);
 };

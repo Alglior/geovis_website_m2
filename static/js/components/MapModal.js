@@ -270,6 +270,13 @@ const MapModal = ({ map, isOpen, onClose }) => {
                             className: 'analysis-paragraph'
                         }, map.analyse)
                     ]) : null,
+                    map.critique ? React.createElement('div', { key: 'critique-section' }, [
+                        React.createElement('h3', { key: 'critique-title' }, 'Critique'),
+                        React.createElement('p', { 
+                            key: 'critique-text',
+                            className: 'critique-paragraph'
+                        }, map.critique)
+                    ]) : null,
                     map.avis ? React.createElement('div', { key: 'avis-section' }, [
                         React.createElement('h3', { key: 'avis-title' }, 'Avis'),
                         Array.isArray(map.avis) 

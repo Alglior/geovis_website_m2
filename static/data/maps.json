@@ -50,6 +50,7 @@
         "Animation des prévisions météo"
       ],
       "analyse": "Cette carte excelle dans la communication visuelle des phénomènes climatiques complexes. Les indicateurs de Maceachren (Communication: 75, Tâche: 70, Interaction: 80) reflètent son interface intuitive et ses fortes capacités interactives. Idéale pour l'enseignement et la sensibilisation climatique.",
+      "critique": "Malgré sa qualité visuelle exceptionnelle, la carte peut parfois souffrir d'une surcharge d'informations pour les utilisateurs novices. La complexité des couches disponibles nécessite un temps d'apprentissage significatif. De plus, la précision des données en temps réel peut varier selon les régions, avec une meilleure couverture pour l'hémisphère nord.",
       "avis": [
         "Excellente carte pour comprendre les phénomènes climatiques globaux. Interface intuitive et données précises.",
         "Les visualisations en temps réel sont particulièrement impressionnantes et permettent de suivre l'évolution des conditions météorologiques à l'échelle planétaire.",
@@ -83,6 +84,7 @@
       "Visualisation simplifiée pour la communication grand public"
     ],
     "analyse": "Cette carte illustre une fracture démographique nette. La croissance à l'Ouest (France, Espagne, UK) est souvent portée par le solde migratoire, tandis que le déclin à l'Est (Roumanie, Bulgarie) et au Sud (Italie, Grèce) reflète un vieillissement de la population et une balance naturelle négative. Le cas de l'Ukraine et de la Russie souligne également l'impact des conflits et des déplacements de population massifs.",
+    "critique": "La représentation binaire (augmentation/diminution) masque les nuances importantes : un pays peut afficher une croissance faible mais stable, tandis qu'un autre peut connaître une hausse artificielle liée à des événements ponctuels. L'absence de données sur les causes (migration vs. natalité) limite l'analyse approfondie.",
     "avis": "Une carte d'une efficacité redoutable pour comprendre les enjeux géopolitiques futurs de l'Europe. Elle simplifie des données complexes pour rendre la trajectoire du continent immédiatement lisible.",
     "tags": [
       "Démographie",
@@ -93,7 +95,7 @@
     "maceachren": {
       "communication": 90,
       "task": 30,
-      "interaction": 15
+      "interaction": 0
     }
   },
     {
@@ -137,6 +139,7 @@
         "Informations sur les stations radio"
       ],
       "analyse": "Une application innovante combinant géographie et culture médiatique. L'interaction exceptionnelle (80) et la communication visuelle (65) en font un outil mémorable. Format audio combiné avec l'interface 3D offre une expérience utilisateur unique et ludique.",
+      "critique": "La couverture géographique est inégale, avec une forte concentration de stations dans les pays développés et une représentation limitée en Afrique et en Asie centrale. L'expérience dépend également de la qualité de connexion internet, et certaines stations peuvent être hors ligne sans indication claire.",
       "avis": "Concept brillant et addictif ! Voyage sonore captivant autour du monde. Interface magnifique.",
       "tags": [
         "Radio",
@@ -168,6 +171,7 @@
         "Données par régions et continents"
       ],
       "analyse": "Outil statistique robuste pour l'analyse démographique mondiale. Les scores Maceachren (Communication: 70, Tâche: 55, Interaction: 50) indiquent une plateforme efficace pour la présentation de données chiffrées. Particulièrement utile pour les analyses socio-démographiques complexes.",
+      "critique": "L'interface peut sembler datée et surchargée de publicités, ce qui nuit à l'expérience utilisateur. La présentation des données manque parfois de contexte méthodologique, et les projections à long terme peuvent être trompeuses sans mention claire des marges d'erreur.",
       "avis": "Très utile pour comprendre les tendances démographiques. Interface claire et données actualisées.",
       "tags": [
         "Population",
@@ -181,38 +185,62 @@
         "interaction": 50
       }
     },
-    {
-      "id": 5,
-      "mode": "2d",
-      "title": "Carte des Feux de Forêt en Temps Réel",
-      "description": "Surveillance globale des incendies de forêt avec détection satellite et prévisions de propagation.",
-      "thumbnail": "/static/images/thumbnails/map-5.png",
-      "url": "https://firms.modaps.eosdis.nasa.gov/map/",
-      "category": "Environnement",
-      "difficulty": "Intermédiaire",
-      "fonctionalites": [
-        "Détection satellite des foyers d'incendie en temps réel",
-        "Classification par intensité et magnitude",
-        "Historique des incendies",
-        "Alertes et notifications",
-        "Prévisions de propagation",
-        "Données NASA FIRMS actualisées",
-        "Cartographie des zones à risque"
-      ],
-      "analyse": "Système de surveillance critique utilisant les données satellites NASA. Les scores élevés (Communication: 75, Tâche: 70, Interaction: 65) reflètent son importance pour les alertes environnementales. Interface professionnelle adaptée aux experts et aux autorités de gestion des crises.",
-      "avis": "Outil essentiel pour le suivi environnemental. Données NASA fiables et interface professionnelle.",
-      "tags": [
-        "Incendies",
-        "Satellite",
-        "NASA",
-        "Environnement"
-      ],
-      "maceachren": {
-        "communication": 75,
-        "task": 70,
-        "interaction": 65
-      }
-    },
+      {
+    "id": 5,
+    "mode": "interactive",
+    "title": "NASA FIRMS - Surveillance Mondiale des Incendies",
+    "description": "Système de pointe de la NASA fournissant des données de surveillance des incendies actifs et des anomalies thermiques en temps quasi réel (LANCE), exploitant les capteurs MODIS et VIIRS.",
+    "thumbnail": "/static/images/thumbnails/map-5.png",
+    "url": "https://firms.modaps.eosdis.nasa.gov/map/",
+    "images":[
+      {
+          "url": "/static/images/feu/carte_globale.png",
+          "title": "Carte Globale"
+        },
+           {
+          "url": "/static/images/feu/carte_globale_time.png",
+          "title": "Carte Globale avec option temporelle"
+        },
+                 {
+          "url": "/static/images/feu/layers.png",
+          "title": "Une partie des couches disponibles"
+        },
+                   {
+          "url": "/static/images/feu/layer_2.png",
+          "title": "Une partie des couches disponibles 2"
+        },
+                 {
+          "url": "/static/images/feu/options.png",
+          "title": "Options disponibles"
+        }
+    ],
+    "category": "Environnement",
+    "difficulty": "Avancé",
+    "fonctionalites": [
+      "Détection thermique quasi-réelle (latence de 3h) via MODIS (1km) et VIIRS (375m)",
+      "Visualisation des traces d'orbite et des temps de passage des satellites",
+      "Filtrage temporel dynamique (Time-based) pour suivre l'évolution chronologique",
+      "Couches contextuelles riches : zones protégées, établissement humains et couverture neigeuse",
+      "Système d'alertes personnalisées par e-mail sur des zones d'intérêt (Email Alerts)",
+      "Exportation de données brutes (SHP, KML, CSV) pour intégration SIG",
+      "Soutien aux décisions critiques avec imagerie de réflectance corrigée (True Color)"
+    ],
+    "analyse": "FIRMS n'est pas une simple carte, c'est un tableau de bord géospatial décisionnel. L'intégration des données VIIRS offre une résolution supérieure pour détecter les petits foyers que MODIS pourrait ignorer. Sa force réside dans sa capacité à superposer des données environnementales (neige, végétation) et humaines (settlements) pour évaluer instantanément la vulnérabilité des populations face au feu. L'ajout des trajectoires orbitales permet aux experts d'anticiper le prochain rafraîchissement des données.",
+    "critique": "L'outil peut générer des 'faux positifs' (volcans, torchères de gaz, réflexions solaires intenses). La courbe d'apprentissage est réelle : la gestion des couches (Overlays) et la compréhension de la différence entre les capteurs exigent une base en télédétection. De plus, la détection est limitée par la couverture nuageuse épaisse qui peut masquer les incendies actifs.",
+    "avis": "La référence absolue en gestion de crise environnementale. Un outil indispensable pour les chercheurs, les ONG et les services d'incendie mondiaux.",
+    "tags": [
+      "Télédétection",
+      "SIG",
+      "NASA",
+      "Gestion de crise",
+      "Changement Climatique"
+    ],
+    "maceachren": {
+      "communication": 20,
+      "task": 95,
+      "interaction": 80
+    }
+  },
     { 
     "id": 6,
     "mode": "2d",
@@ -232,6 +260,7 @@
       "Comparaison transfrontalière directe"
     ],
     "analyse": "Cette cartographie révèle l'impact de l'organisation territoriale sur le quotidien. On observe que les pays à forte centralisation économique (comme le Royaume-Uni avec Londres ou la Lettonie avec Riga) ou à forte congestion (Luxembourg) présentent les trajets les plus longs. À l'inverse, les économies insulaires ou moins denses (Islande, Chypre) sont les plus efficientes. Note critique : l'agrégation à l'échelle nationale masque les disparités massives entre métropoles saturées et zones rurales.",
+    "critique": "L'agrégation nationale est réductrice : elle masque les écarts énormes entre capitales congestionnées (Londres, Paris) et régions rurales. Un Français moyen peut faire 15 minutes de trajet, mais un Francilien en fait 45. De plus, aucune distinction n'est faite entre modes de transport (voiture vs. transports en commun), ce qui fausse la lecture de la qualité de vie réelle.",
     "avis": "Un excellent outil de communication grand public qui rend des données statistiques abstraites immédiatement perceptibles. Le choix du rouge pour les temps longs active une réponse cognitive liée au stress, renforçant l'impact du message.",
     "tags": [
       "Transport",
@@ -264,6 +293,7 @@
         "Recommandations de santé personnalisées"
       ],
       "analyse": "Application de surveillance environnementale orientée santé publique. Les scores Maceachren (Communication: 70, Tâche: 65, Interaction: 55) indiquent une interface efficace et accessible. Combine données scientifiques fiables avec présentation intuitive, essentielle pour la sensibilisation aux enjeux de qualité de l'air urbain.",
+      "critique": "La densité des stations de mesure varie considérablement selon les régions, avec une couverture limitée dans les pays en développement. Les algorithmes de prévision peuvent parfois être imprécis lors de conditions météorologiques changeantes. L'application commerciale propose des fonctionnalités premium, ce qui limite l'accès aux données complètes.",
       "avis": "Interface simple et efficace pour surveiller la pollution. Données précises et alertes utiles.",
       "tags": [
         "Pollution",
@@ -296,6 +326,7 @@
         "Alertes de trafic et incidents"
       ],
       "analyse": "Plateforme professionnelle de surveillance du commerce maritime mondial. Les scores équilibrés (Communication: 70, Tâche: 60, Interaction: 60) reflètent son efficacité dans le suivi des opérations logistiques complexes. Essential pour les professionnels du transport maritime et de la supply chain.",
+      "critique": "L'accès aux données historiques complètes et aux fonctionnalités avancées nécessite un abonnement payant. Certains navires militaires ou privés peuvent désactiver leur transpondeur AIS, créant des zones aveugles. La surcharge visuelle dans les zones de fort trafic (détroits, ports majeurs) peut rendre la navigation difficile.",
       "avis": "Incroyable de voir le trafic maritime en direct. Très utile pour le commerce et la logistique.",
       "tags": [
         "Maritime",
@@ -309,37 +340,65 @@
         "interaction": 60
       }
     },
-    {
-      "id": 9,
-      "mode": "2d",
-      "title": "Villes et Urbanisation Mondiale",
-      "description": "Visualisation de la croissance urbaine mondiale avec densité de population, mégalopoles et expansion des villes.",
-      "thumbnail": "/static/images/thumbnails/map-9.png",
-      "url": "https://luminocity3d.org/WorldCity/#3/12.00/10.00",
-      "category": "Démographie",
-      "difficulty": "Intermédiaire",
-      "fonctionalites": [
-        "Visualisation 3D du relief urbain",
-        "Représentation proportionnelle de la densité de population",
-        "Zoom interactif jusqu'au niveau des rues",
-        "Identification des mégalopoles mondiales",
-        "Comparaison de la croissance urbaine",
-        "Animation temporelle de l'expansion urbaine"
-      ],
-      "analyse": "Représentation exceptionnelle de la géographie urbaine mondiale par visualisation 3D volumétrique. Le score d'interaction élevé (75) et de tâche (75) reflètent l'efficacité de cette approche pour comprendre les dynamiques urbaines. Particulièrement pertinent pour les urbanistes, géographes et décideurs politiques.",
-      "avis": "Visualisation 3D spectaculaire de l'urbanisation mondiale. Perspective unique sur la densité urbaine.",
-      "tags": [
-        "Villes",
-        "Urbanisation",
-        "3D",
-        "Population"
-      ],
-      "maceachren": {
-        "communication": 65,
-        "task": 75,
-        "interaction": 55
+      {
+    "id": 9,
+    "mode": "interactive",
+    "title": "World City Populations (1975-2050)",
+    "description": "Cartographie interactive illustrant la transformation urbaine mondiale, retraçant l'évolution des agglomérations du XXe siècle jusqu'aux projections de 2050.",
+    "thumbnail": "/static/images/thumbnails/map-9.png",
+    "url": "https://luminocity3d.org/WorldCity/",
+    "images": [
+      {
+        "url": "/static/images/world_city_population/carte_globale.png",
+        "title": "Carte Globale"
+      },
+      {
+        "url": "/static/images/world_city_population/carte_globale2.png",
+        "title": "Carte Globale 2"
+      },
+      {
+        "url": "/static/images/world_city_population/popup.png",
+        "title": "Pop-up d'Information"
+      },
+      {
+        "url": "/static/images/world_city_population/map_guide.png",
+        "title": "Guide de la Carte"
+      },
+      {
+        "url": "/static/images/world_city_population/map_analysis.png",
+        "title": "Tableaux d'Analyse"
+      },
+      {
+        "url": "/static/videos/world_city_population.webm",
+        "title": "Démonstration",
+        "type": "video"
       }
-    },
+    ],
+    "category": "Démographie",
+    "difficulty": "Débutant",
+    "fonctionalites": [
+      "Représentation proportionnelle des cercles selon la population des agglomérations",
+      "Série temporelle comparant les données de 1975, 2000, 2025 et 2050",
+      "Tableaux d'analyse intégrés classant les plus grandes villes par année",
+      "Fiches détaillées par ville avec graphiques de croissance et rang mondial/national",
+      "Filtrage par groupes de villes via des requêtes de données prédéfinies",
+      "Indicateurs de contextes globaux sur la part de la population urbaine mondiale"
+    ],
+    "analyse": "Cet outil excelle dans la vulgarisation de la 'Grande Transformation Urbaine'. En 1950, seulement 20% de la population mondiale vivait en ville, contre une projection de 48,3% en 2050 selon la méthodologie de l'ONU. La carte permet de visualiser instantanément le basculement du centre de gravité urbain vers l'Asie (Jakarta, Dhaka, Tokyo). L'interface est fluide et pédagogique, rendant des données statistiques complexes accessibles via une navigation intuitive et des graphiques épurés.",
+    "critique": "Bien que les projections jusqu'en 2050 soient précieuses, elles restent dépendantes des modèles de l'ONU qui peuvent être influencés par des changements politiques ou climatiques imprévus. L'utilisation de cercles proportionnels peut entraîner des chevauchements illisibles dans les zones à très haute densité comme l'Asie du Sud-Est ou l'Europe côtière.",
+    "avis": "Un outil de narration de données (data storytelling) remarquable, idéal pour l'enseignement et la compréhension des enjeux démographiques futurs.",
+    "tags": [
+      "Urbanisation",
+      "Démographie",
+      "Prospective",
+      "Statistiques ONU"
+    ],
+    "maceachren": {
+      "communication": 85,
+      "task": 65,
+      "interaction": 80
+    }
+  },
     {
     "id": 10,
     "mode": "interactive",
@@ -421,6 +480,7 @@
       "Exploration géographique par zones prédéfinies (Alaska, Californie, Monde, etc.)"
     ],
     "analyse": "Cet outil dépasse la simple visualisation pour devenir un tableau de bord de gestion de crise. L'intégration de la densité de population et des limites de plaques permet une interprétation immédiate du risque humain. La symbologie est rigoureuse : la taille des cercles indique la magnitude, tandis que la couleur (du rouge au gris) représente la récence de l'événement.",
+    "critique": "La profusion d'options et de couches peut submerger les utilisateurs novices. Les rapports DYFI dépendent des contributions citoyennes, créant un biais de représentation vers les zones densément peuplées. Le délai de mise à jour (quelques minutes) peut être critique lors de séismes majeurs nécessitant une réponse immédiate.",
     "avis": "Indispensable pour la sécurité civile et l'éducation. L'interface réussit le tour de force de rendre des données brutes complexes (issues du catalogue USGS) accessibles sans sacrifier la précision scientifique.",
     "tags": [
       "Séismes",
@@ -483,6 +543,7 @@
         "Pop-ups d'information détaillés avec contacts des chercheurs et liens vers les publications scientifiques associées"
       ],
       "analyse": "Movebank n'est pas une simple carte, mais un écosystème de recherche. Son interface permet de passer de la vision globale (densité de points) à l'analyse comportementale individuelle. La force de l'outil réside dans sa capacité à standardiser des données hétérogènes (plus de 1 600 taxons) pour permettre des études comparatives sur l'impact du changement climatique ou des infrastructures humaines sur la faune.",
+      "critique": "La courbe d'apprentissage est très raide, rendant l'outil peu accessible aux non-chercheurs. La gestion des droits d'accès peut être frustrante : de nombreuses études limitent le téléchargement des données brutes. Les performances peuvent être lentes lors de la visualisation de trajectoires avec des millions de points. L'interface mériterait une modernisation graphique.",
       "avis": "L'outil ultime pour la conservation. La fluidité entre la visualisation cartographique et les outils d'analyse (MoveApps) en fait la référence mondiale. L'aspect collaboratif (DOI pour les données) garantit une science ouverte et rigoureuse.",
       "tags": [
         "Migration",
@@ -516,6 +577,7 @@
         "Notifications push personnalisées"
       ],
       "analyse": "Application grand public pour le suivi aérien combinant données ADS-B professionnelles avec interface conviviale. Les scores élevés (Communication: 75, Interaction: 70) reflètent son succès auprès du grand public. Crée une expérience ludique d'un domaine techniquement complexe.",
+      "critique": "Les fonctionnalités les plus intéressantes (historique complet, alertes avancées, vue 3D) nécessitent un abonnement premium coûteux. Certains vols militaires ou gouvernementaux sont masqués pour des raisons de sécurité. La dépendance au système ADS-B signifie que les avions plus anciens ou ceux survolant des zones reculées peuvent ne pas apparaître.",
       "avis": "Application impressionnante pour suivre les avions en temps réel. Interface fluide et informations complètes.",
       "tags": [
         "Aviation",
@@ -548,6 +610,7 @@
         "Vulnérabilités et redondance des routes"
       ],
       "analyse": "Visualisation critique de l'infrastructure internet mondiale souterraine. Les scores Maceachren modérés (Communication: 65, Tâche: 60, Interaction: 45) reflètent son approche techniques pour experts. Révèle les dépendances géostratégiques cachées de la connectivité mondiale.",
+      "critique": "L'interface statique offre peu d'interactivité avancée. Les informations techniques peuvent être obsolètes pour certains câbles plus anciens. L'absence de données sur les capacités réelles utilisées limite l'analyse de la congestion. La représentation 2D simplifie excessivement la complexité tridimensionnelle des installations sous-marines.",
       "avis": "Révélateur de l'infrastructure internet mondiale. Très instructif sur la connectivité globale.",
       "tags": [
         "Internet",
@@ -580,6 +643,7 @@
         "Téléchargement de données pour analyse"
       ],
       "analyse": "Outil d'intelligence environnementale de premier plan pour le suivi de la déforestation mondiale. Les scores élevés (Communication: 80, Tâche: 75) reflètent son efficacité pour les décideurs. Fusion de données satellites avec analyse géospatiale pour l'action environnementale.",
+      "critique": "La résolution spatiale des alertes (30m) peut manquer la déforestation de petite échelle. La couverture nuageuse tropicale peut créer des lacunes dans les données. La complexité de l'interface et la multitude de couches disponibles nécessitent une formation pour une utilisation optimale. Le délai de traitement satellitaire peut retarder la détection de plusieurs jours.",
       "avis": "Outil crucial pour la protection des forêts. Données satellite précises et actualisées régulièrement.",
       "tags": [
         "Forêts",
@@ -612,6 +676,7 @@
         "Prévisions de demande énergétique"
       ],
       "analyse": "Plateforme de transparence énergétique pour la transition bas-carbone. Les scores équilibrés (Communication: 70, Tâche: 65, Interaction: 55) indiquent sa capacité à transformer des données complexes en insights accessibles. Essential pour comprendre et accélérer la décarbonisation.",
+      "critique": "La couverture géographique est limitée principalement à l'Europe, l'Amérique du Nord et quelques pays développés, excluant de nombreuses régions clés. Les méthodes de calcul de l'intensité carbone peuvent varier selon les sources, créant des incohérences. Les données en temps réel dépendent de la disponibilité des API des opérateurs de réseau, qui peut être inégale.",
       "avis": "Excellent pour comprendre la transition énergétique. Visualisation claire de l'empreinte carbone.",
       "tags": [
         "Énergie",
@@ -644,6 +709,7 @@
         "Données de température marine"
       ],
       "analyse": "Atlas scientifique pour la conservation marine combinant cartographie spatiale haute résolution avec analyse écologique avancée. Les scores modérés reflètent sa complexité technique orientée vers la recherche. Outil critique pour documenter l'impact du changement climatique sur les écosystèmes marins.",
+      "critique": "La complexité de l'interface rend l'outil peu accessible aux non-experts. La couverture est inégale, privilégiant les zones déjà bien étudiées. Les données de santé des coraux ne sont pas toujours actualisées en temps réel. Les performances de chargement peuvent être lentes pour les zones à haute résolution, nécessitant une connexion internet robuste.",
       "avis": "Ressource exceptionnelle pour l'étude des océans. Cartographie haute résolution des récifs.",
       "tags": [
         "Corail",
@@ -676,6 +742,7 @@
         "Données d'empreinte écologique lumineuse"
       ],
       "analyse": "Application interdisciplinaire combinant astronomie, environnement et urbanisme. Les scores modérés reflètent son usage spécialisé par astronomes et chercheurs. Illustre de manière spectaculaire l'impact invisible de l'urbanisation sur l'écosystème nocturne.",
+      "critique": "Les données satellitaires peuvent dater de plusieurs années, ne reflétant pas les changements récents d'infrastructure. L'interactivité limitée (principalement zoom et pan) restreint les possibilités d'analyse. La visualisation ne distingue pas entre différents types de pollution lumineuse (LED vs. sodium). L'absence de données temporelles empêche de suivre l'évolution historique précise.",
       "avis": "Impressionnant de voir l'impact de l'éclairage urbain. Utile pour l'astronomie amateur.",
       "tags": [
         "Lumière",

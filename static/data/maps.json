@@ -363,6 +363,10 @@
           "url": "/static/images/animaux/carte_globale.png",
           "title": "Carte Globale"
         },
+           {
+          "url": "/static/images/animaux/carte_globale_satellite.png",
+          "title": "Carte Globale Satellite"
+        },
         {
           "url": "/static/images/animaux/filtre.png",
           "title": "Filtre de Recherche"

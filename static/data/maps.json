@@ -320,37 +320,101 @@
       }
     },
     {
-      "id": 10,
-      "mode": "2d",
-      "title": "Séismes en Temps Réel",
-      "description": "Monitoring global de l'activité sismique avec magnitude, profondeur et alertes tsunami.",
-      "thumbnail": "/static/images/thumbnails/map-10.png",
-      "url": "https://earthquake.usgs.gov/earthquakes/map/",
-      "category": "Géologie",
-      "difficulty": "Intermédiaire",
-      "fonctionalites": [
-        "Détection en temps réel des séismes mondiaux",
-        "Magnitude, profondeur et localisation précise",
-        "Code couleur par intensité",
-        "Alertes tsunami associées",
-        "Historique sismique détaillé",
-        "Données USGS validées scientifiquement",
-        "Cartographie des zones de risque sismique"
-      ],
-      "analyse": "Système critique de surveillance géosismique basé sur les données officielles de l'USGS. L'excellent score de communication (80) reflète la clarté de sa présentation pour un public large. Combines rigueur scientifique avec accessibilité, essentiel pour la prévention des risques naturels.",
-      "avis": "Données USGS très fiables. Interface claire pour suivre l'activité sismique mondiale.",
-      "tags": [
-        "Séismes",
-        "USGS",
-        "Géologie",
-        "Alertes"
-      ],
-      "maceachren": {
-        "communication": 80,
-        "task": 70,
-        "interaction": 50
+    "id": 10,
+    "mode": "interactive",
+    "title": "USGS : Surveillance Sismique Mondiale en Temps Réel",
+    "description": "Plateforme scientifique de référence de l'Institut d'études géologiques des États-Unis (USGS) offrant un monitoring global et dynamique de l'activité tectonique. Le système intègre des données de magnitude, de profondeur et d'impact (PAGER/ShakeMap) avec une mise à jour en continu.",
+    "thumbnail": "/static/images/thumbnails/map-10.png",
+    "images": [
+      {
+        "url": "/static/images/seisme/carte_globale.png",
+        "title": "Carte Globale base"
+      },
+      {
+        "url": "/static/images/seisme/carte_globale_ocean.png",
+        "title": "Carte Globale avec Fond Océanique"
+      },
+      {
+        "url": "/static/images/seisme/carte_globale_street.png",
+        "title": "Carte Globale avec Fond Street"
+      },
+      {
+        "url": "/static/images/seisme/carte_globale_satellite.png",
+        "title": "Carte Globale avec Fond Satellite"
+      },
+      {
+        "url": "/static/images/seisme/carte_globale_terrain.png",
+        "title": "Carte Globale avec Fond Terrain"
+      },
+      {
+        "url": "/static/images/seisme/filtre.png",
+        "title": "Filtre de Recherche"
+      },
+      {
+        "url": "/static/images/seisme/filtre_format.png",
+        "title": "Filtre option de Format"
+      },
+      {
+        "url": "/static/images/seisme/filtre_sort.png",
+        "title": "Filtre option de Tri"
+      },
+      {
+        "url": "/static/images/seisme/legend.png",
+        "title": "Légende"
+      },
+      {
+        "url": "/static/images/seisme/couche_liste.png",
+        "title": "Liste des couches disponibles"
+      },
+        {
+        "url": "/static/images/seisme/selection_point.png",
+        "title": "Sélection d'un point sismique"
+      },
+      {
+        "url": "/static/images/seisme/choix_zone.png",
+        "title": "Choix de la zone géographique"
+      },
+      {
+        "url": "/static/images/seisme/setting_1.png",
+        "title": "Paramètres - Onglet Général"
+      },
+            {
+        "url": "/static/images/seisme/setting_2.png",
+        "title": "Paramètres - Onglet Général"
+      },
+      {
+        "url": "/static/images/seisme/section_about.png",
+        "title": "Page plus d'informations"
       }
-    },
+    ],
+    "url": "https://earthquake.usgs.gov/earthquakes/map/",
+    "category": "Géologie / Risques Naturels",
+    "difficulty": "Intermédiaire",
+    "auteur": "USGS",
+    "fonctionalites": [
+      "Flux de données en temps réel avec option 'Auto Update'",
+      "Filtrage multicritères avancé par magnitude (2.5+, 4.5+), période temporelle (1, 7 ou 30 jours) et importance des événements",
+      "Gestion de couches SIG : Limites de plaques tectoniques, Densité de population, Failles et zones de risque aux USA",
+      "Personnalisation de l'affichage : Fonds de carte (Satellite, Terrain, Street, Ocean, Grayscale) et unités de distance (Km/Miles)",
+      "Analyse d'impact détaillée par point : Accès direct aux rapports DYFI (Did You Feel It?), ShakeMap et PAGER pour chaque séisme",
+      "Système de notifications bureau et réglages personnalisés des fuseaux horaires (UTC ou local)",
+      "Exploration géographique par zones prédéfinies (Alaska, Californie, Monde, etc.)"
+    ],
+    "analyse": "Cet outil dépasse la simple visualisation pour devenir un tableau de bord de gestion de crise. L'intégration de la densité de population et des limites de plaques permet une interprétation immédiate du risque humain. La symbologie est rigoureuse : la taille des cercles indique la magnitude, tandis que la couleur (du rouge au gris) représente la récence de l'événement.",
+    "avis": "Indispensable pour la sécurité civile et l'éducation. L'interface réussit le tour de force de rendre des données brutes complexes (issues du catalogue USGS) accessibles sans sacrifier la précision scientifique.",
+    "tags": [
+      "Séismes",
+      "Tectonique des plaques",
+      "USGS",
+      "Temps Réel",
+      "Risques Majeurs"
+    ],
+    "maceachren": {
+      "communication": 80,
+      "task": 85,
+      "interaction": 90
+    }
+  },
     {
       "id": 11,
       "mode": "interactive",

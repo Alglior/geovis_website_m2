@@ -156,33 +156,33 @@
     {
       "id": 4,
       "mode": "2d",
-      "title": "Atlas Démographique Interactif",
-      "description": "Analyse démographique mondiale avec pyramides des âges, migration et évolution de la population par pays.",
-      "thumbnail": "/static/images/thumbnails/map-4.png",
-      "url": "https://www.worldometers.info/world-population/",
-      "category": "Démographie",
-      "difficulty": "Intermédiaire",
+      "title": "Réseau Diplomatique Français (Janvier 2026)",
+      "description": "Cartographie officielle de la présence diplomatique et consulaire française, illustrant le troisième réseau mondial avec ses ambassades, consulats et représentations permanentes.",
+      "thumbnail": "/static/images/thumbnails/ambassade_fr_monde.jpg",
+      "url": "https://www.diplomatie.gouv.fr/IMG/jpg/postes_diplo_2026_cle068a1f.jpg",
+      "category": "Géopolitique",
+      "difficulty": "Débutant",
       "fonctionalites": [
-        "Pyramides des âges interactives par pays",
-        "Projections démographiques futures",
-        "Statistiques de migration",
-        "Comparaison entre pays",
-        "Graphiques d'évolution temporelle",
-        "Données par régions et continents"
+        "Localisation des Ambassades et Consulats généraux de France",
+        "Identification des représentations auprès des organisations internationales",
+        "Distinction visuelle entre chancelleries détachées et antennes diplomatiques",
+        "Visualisation des bureaux de coopération et bureaux français de Taipei",
+        "Cartouche détaillé sur la zone Europe et Moyen-Orient pour une meilleure lisibilité",
+        "Tracé des rattachements diplomatiques pour les petits États et îles"
       ],
-      "analyse": "Outil statistique robuste pour l'analyse démographique mondiale. Les scores Maceachren (Communication: 70, Tâche: 55, Interaction: 50) indiquent une plateforme efficace pour la présentation de données chiffrées. Particulièrement utile pour les analyses socio-démographiques complexes.",
-      "critique": "L'interface peut sembler datée et surchargée de publicités, ce qui nuit à l'expérience utilisateur. La présentation des données manque parfois de contexte méthodologique, et les projections à long terme peuvent être trompeuses sans mention claire des marges d'erreur.",
-      "avis": "Très utile pour comprendre les tendances démographiques. Interface claire et données actualisées.",
+      "analyse": "Cette carte produite par le Ministère de l'Europe et des Affaires étrangères est un outil de souveraineté. Elle révèle l'étendue globale de l'influence française, particulièrement dense en Europe et en Afrique. La sémiologie graphique utilise des symboles géométriques simples (carrés, cercles, triangles) pour hiérarchiser les types de postes. C'est une ressource de référence pour comprendre le déploiement de l'administration française hors de ses frontières au 1er janvier 2026.",
+      "critique": "Le format image statique (.jpg) limite considérablement l'usage : impossible de cliquer pour obtenir l'adresse d'un poste ou de zoomer sans perte de qualité. La densité extrême des postes en Europe rend la lecture difficile malgré l'encart agrandi. Il manque une dimension temporelle permettant de visualiser l'ouverture ou la fermeture de postes par rapport aux années précédentes.",
+      "avis": "Un document officiel indispensable pour visualiser le rayonnement géopolitique de la France, bien que techniquement rudimentaire.",
       "tags": [
-        "Population",
-        "Démographie",
-        "Statistiques",
-        "Social"
+        "Diplomatie",
+        "France",
+        "Géopolitique",
+        "Ambassades"
       ],
       "maceachren": {
         "communication": 70,
-        "task": 55,
-        "interaction": 50
+        "task": 30,
+        "interaction": 0
       }
     },
       {
@@ -212,6 +212,10 @@
                  {
           "url": "/static/images/feu/options.png",
           "title": "Options disponibles"
+        },
+      {
+          "url": "/static/videos/feu.webm",
+          "title": "Démonstration"
         }
     ],
     "category": "Environnement",
@@ -560,35 +564,87 @@
     },
     {
       "id": 12,
-      "mode": "2d",
-      "title": "Trafic Aérien en Direct",
-      "description": "Suivi en temps réel des vols commerciaux et privés dans le monde entier avec informations détaillées sur chaque appareil.",
+      "mode": "interactive",
+      "title": "Flightradar24 - Suivi du Trafic Aérien Mondial",
+      "description": "Leader mondial du suivi de vols en temps réel, utilisant un réseau massif de récepteurs ADS-B pour visualiser le déplacement de plus de 200 000 vols quotidiens.",
       "thumbnail": "/static/images/thumbnails/map-12.png",
       "url": "https://www.flightradar24.com/",
-      "category": "Transport",
-      "difficulty": "Débutant",
-      "fonctionalites": [
-        "Suivi en temps réel des aéronefs",
-        "Informations détaillées (altitude, vitesse, compagnie, type d'appareil)",
-        "Trajectoires et historique des vols",
-        "Filtres par compagnie aérienne ou type d'avion",
-        "Alertes de décollage et d'atterrissage",
-        "Informations aéroportuaires",
-        "Notifications push personnalisées"
+      "images": [
+        {
+          "url": "/static/images/avions/carte_globale.png",
+          "title": "Carte Globale"
+        },
+        {
+          "url": "/static/images/avions/carte_globale2.png",
+          "title": "Carte Globale 2"
+        },
+        {
+          "url": "/static/images/avions/control_panel.png",
+          "title": "Panneau de Contrôle"
+        },
+        {
+          "url": "/static/images/avions/select_plane.png",
+          "title": "Sélection d'un Avion"
+        },
+        {
+          "url": "/static/images/avions/settings_maps.png",
+          "title": "Paramètres de la Carte"
+        },
+        {
+          "url": "/static/images/avions/settings_misc.png",
+          "title": "Paramètres Divers"
+        },
+        {
+          "url": "/static/images/avions/settings_visibility.png",
+          "title": "Paramètres de Visibilité"
+        },
+        {
+          "url": "/static/images/avions/vue.png",
+          "title": "Paramètres de Vue"
+        },
+        {
+          "url": "/static/images/avions/weathers_options.png",
+          "title": "Options Météo"
+        },
+        {
+          "url": "/static/images/avions/widgets_options.png",
+          "title": "Options des Widgets"
+        },
+                {
+          "url": "/static/images/avions/vue_interne.png",
+          "title": "Vue détail avion"
+        },
+        {
+          "url": "/static/videos/avions.webm",
+          "title": "Démonstration",
+          "type": "video"
+        }
       ],
-      "analyse": "Application grand public pour le suivi aérien combinant données ADS-B professionnelles avec interface conviviale. Les scores élevés (Communication: 75, Interaction: 70) reflètent son succès auprès du grand public. Crée une expérience ludique d'un domaine techniquement complexe.",
-      "critique": "Les fonctionnalités les plus intéressantes (historique complet, alertes avancées, vue 3D) nécessitent un abonnement premium coûteux. Certains vols militaires ou gouvernementaux sont masqués pour des raisons de sécurité. La dépendance au système ADS-B signifie que les avions plus anciens ou ceux survolant des zones reculées peuvent ne pas apparaître.",
-      "avis": "Application impressionnante pour suivre les avions en temps réel. Interface fluide et informations complètes.",
+      "category": "Transport",
+      "difficulty": "Intermédiaire",
+      "fonctionalites": [
+        "Visualisation en temps réel du trafic aérien mondial (latence de quelques secondes)",
+        "Identification complète : modèle d'avion, immatriculation, compagnie et indicatif d'appel",
+        "Sélection multiple d'appareils (Multi-select) pour comparer les trajectoires simultanément",
+        "Isolation de flotte : possibilité de masquer tous les autres avions pour ne garder que la sélection",
+        "Données télémétriques précises : altitude-pression, vitesse sol et vitesse verticale",
+        "Lecture des tracés historiques et relecture des incidents passés (Playback)",
+        "Informations météorologiques aéronautiques (METAR/TAF) et prévisions de pistes"
+      ],
+      "analyse": "Flightradar24 transforme des données techniques complexes en une expérience visuelle fluide. C'est un outil hybride : il sert à la fois de divertissement pour les passionnés et d'outil de surveillance sérieux. Le mode Multi-select est particulièrement utile pour suivre une flotte spécifique ou comprendre les schémas d'attente à l'approche d'un aéroport saturé. Le score de tâche est très élevé car il permet des analyses précises sur les flux aéroportuaires.",
+      "critique": "L'un des points noirs majeurs concerne les performances au démarrage : le chargement initial de la carte est extrêmement lent, car le navigateur doit traiter des milliers d'objets vectoriels simultanément, ce qui peut figer l'interface. Bien que l'on puisse isoler certains avions, cette fonctionnalité de filtrage avancée peut encore ralentir les navigateurs poussés à leurs limites. Par ailleurs, le modèle économique verrouille l'historique étendu et les options météo derrière des abonnements onéreux.",
+      "avis": "L'outil de référence absolue pour l'aviation. Malgré une lourdeur logicielle au lancement, la richesse des données et les options d'isolation d'appareils sont inégalées.",
       "tags": [
-        "Aviation",
-        "Vols",
+        "Aéronautique",
+        "ADS-B",
         "Temps réel",
-        "Transport"
+        "Logistique",
+        "Multi-select"
       ],
       "maceachren": {
-        "communication": 75,
-        "task": 55,
-        "interaction": 70
+        "communication": 45,
+        "task": 85,
+        "interaction": 95
       }
     },
     {

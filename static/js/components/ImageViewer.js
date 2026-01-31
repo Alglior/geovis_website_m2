@@ -2,6 +2,10 @@
 const ImageViewer = ({ images, map, onClose, initialIndex = 0 }) => {
     const [currentIndex, setCurrentIndex] = React.useState(initialIndex);
     const [videoThumbnails, setVideoThumbnails] = React.useState({});
+    const [zoomLevel, setZoomLevel] = React.useState(1);
+    const [isDragging, setIsDragging] = React.useState(false);
+    const [position, setPosition] = React.useState({ x: 0, y: 0 });
+    const [dragStart, setDragStart] = React.useState({ x: 0, y: 0 });
 
     if (!images || images.length === 0) return null;
 
@@ -94,22 +98,75 @@ const ImageViewer = ({ images, map, onClose, initialIndex = 0 }) => {
 
     const handleNext = () => {
         setCurrentIndex((prev) => (prev + 1) % images.length);
+        setZoomLevel(1);
+        setPosition({ x: 0, y: 0 });
     };
 
     const handlePrev = () => {
         setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+        setZoomLevel(1);
+        setPosition({ x: 0, y: 0 });
+    };
+
+    const handleZoomIn = () => {
+        setZoomLevel(prev => Math.min(prev + 0.25, 3));
+    };
+
+    const handleZoomOut = () => {
+        setZoomLevel(prev => {
+            const newZoom = Math.max(prev - 0.25, 1);
+            if (newZoom === 1) {
+                setPosition({ x: 0, y: 0 });
+            }
+            return newZoom;
+        });
+    };
+
+    const handleResetZoom = () => {
+        setZoomLevel(1);
+        setPosition({ x: 0, y: 0 });
+    };
+
+    const handleMouseDown = (e) => {
+        if (zoomLevel > 1) {
+            setIsDragging(true);
+            setDragStart({ x: e.clientX - position.x, y: e.clientY - position.y });
+            e.preventDefault();
+        }
+    };
+
+    const handleMouseMove = (e) => {
+        if (isDragging && zoomLevel > 1) {
+            setPosition({
+                x: e.clientX - dragStart.x,
+                y: e.clientY - dragStart.y
+            });
+        }
+    };
+
+    const handleMouseUp = () => {
+        setIsDragging(false);
     };
 
     const handleKeyDown = (e) => {
         if (e.key === 'ArrowRight') handleNext();
         if (e.key === 'ArrowLeft') handlePrev();
         if (e.key === 'Escape') onClose();
+        if (e.key === '+' || e.key === '=') handleZoomIn();
+        if (e.key === '-') handleZoomOut();
+        if (e.key === '0') handleResetZoom();
     };
 
     React.useEffect(() => {
         window.addEventListener('keydown', handleKeyDown);
-        return () => window.removeEventListener('keydown', handleKeyDown);
-    }, []);
+        window.addEventListener('mousemove', handleMouseMove);
+        window.addEventListener('mouseup', handleMouseUp);
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown);
+            window.removeEventListener('mousemove', handleMouseMove);
+            window.removeEventListener('mouseup', handleMouseUp);
+        };
+    }, [isDragging, zoomLevel, position, dragStart]);
 
     const currentMedia = images[currentIndex];
     const currentUrl = getMediaUrl(currentMedia);
@@ -128,11 +185,20 @@ const ImageViewer = ({ images, map, onClose, initialIndex = 0 }) => {
                 autoPlay: true
             });
         } else {
+            const mediaStyle = {
+                transform: `scale(${zoomLevel}) translate(${position.x / zoomLevel}px, ${position.y / zoomLevel}px)`,
+                cursor: zoomLevel > 1 ? (isDragging ? 'grabbing' : 'grab') : 'default',
+                transition: isDragging ? 'none' : 'transform 0.2s ease'
+            };
+            
             return React.createElement('img', {
                 src: currentUrl,
                 alt: currentTitle || `Média ${currentIndex + 1}`,
                 className: `viewer-image ${isInteractiveMode ? 'mode-interactive' : 'mode-2d'}`,
-                key: 'current-image'
+                key: 'current-image',
+                style: mediaStyle,
+                onMouseDown: handleMouseDown,
+                draggable: false
             });
         }
     };
@@ -190,6 +256,36 @@ const ImageViewer = ({ images, map, onClose, initialIndex = 0 }) => {
                 key: 'close-btn',
                 title: 'Fermer (Esc)'
             }, '×'),
+
+            !isVideo ? React.createElement('div', {
+                className: 'viewer-zoom-controls',
+                key: 'zoom-controls'
+            }, [
+                React.createElement('button', {
+                    className: 'zoom-btn',
+                    onClick: handleZoomIn,
+                    key: 'zoom-in',
+                    title: 'Zoomer (+)',
+                    disabled: zoomLevel >= 3
+                }, '+'),
+                React.createElement('span', {
+                    className: 'zoom-level',
+                    key: 'zoom-level'
+                }, `${Math.round(zoomLevel * 100)}%`),
+                React.createElement('button', {
+                    className: 'zoom-btn',
+                    onClick: handleZoomOut,
+                    key: 'zoom-out',
+                    title: 'Dézoomer (-)',
+                    disabled: zoomLevel <= 1
+                }, '−'),
+                zoomLevel > 1 ? React.createElement('button', {
+                    className: 'zoom-btn zoom-reset',
+                    onClick: handleResetZoom,
+                    key: 'zoom-reset',
+                    title: 'Réinitialiser (0)'
+                }, '⟲') : null
+            ]) : null,
 
             React.createElement('div', {
                 className: 'image-viewer-main',

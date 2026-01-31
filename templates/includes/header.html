@@ -1,0 +1,69 @@
+<!-- Navigation Header -->
+<header class="main-header">
+    <nav class="navbar glass-effect">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="{{ url_for('index') }}" class="brand-link">
+                    <span class="brand-icon">🌍</span>
+                    <span class="brand-text">GeoVis Galaxy</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="{{ url_for('index') }}" class="nav-link {% if request.endpoint == 'index' %}active{% endif %}" onclick="scrollToTop()">Accueil</a></li>
+                    <li><a href="#maps-section" class="nav-link" onclick="scrollToSection('maps-section')">Cartes</a></li>
+                    <li><a href="#features-section" class="nav-link" onclick="scrollToSection('features-section')">Fonctionnalités</a></li>
+                    <li><a href="#about-section" class="nav-link" onclick="scrollToSection('about-section')">À Propos</a></li>
+                    <li><a href="#contact-section" class="nav-link" onclick="scrollToSection('contact-section')">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-actions">
+
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<script>
+function scrollToSection(sectionId) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Mise à jour de la navigation active au scroll
+window.addEventListener('scroll', function() {
+    const sections = ['maps-section', 'features-section'];
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    let current = '';
+    sections.forEach(sectionId => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            const sectionTop = section.offsetTop - 100;
+            if (window.pageYOffset >= sectionTop) {
+                current = sectionId;
+            }
+        }
+    });
+    
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+        }
+    });
+});
+</script>

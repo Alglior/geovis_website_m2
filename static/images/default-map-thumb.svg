@@ -1,0 +1,40 @@
+<!-- Vignette par défaut pour les cartes -->
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+            <stop offset="50%" style="stop-color:#764ba2;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#f093fb;stop-opacity:1" />
+        </linearGradient>
+        <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+            <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/>
+        </pattern>
+    </defs>
+    
+    <!-- Background gradient -->
+    <rect width="400" height="300" fill="url(#bg)"/>
+    <rect width="400" height="300" fill="url(#grid)" opacity="0.3"/>
+    
+    <!-- Map elements -->
+    <g transform="translate(200,150)">
+        <!-- Center icon -->
+        <circle r="40" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+        <text x="0" y="15" text-anchor="middle" fill="white" font-size="36" font-family="Arial">🗺️</text>
+        
+        <!-- Connecting lines -->
+        <line x1="-80" y1="-60" x2="80" y2="60" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+        <line x1="80" y1="-60" x2="-80" y2="60" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+        
+        <!-- Corner points -->
+        <circle cx="-80" cy="-60" r="6" fill="rgba(255,255,255,0.8)"/>
+        <circle cx="80" cy="-60" r="6" fill="rgba(255,255,255,0.8)"/>
+        <circle cx="-80" cy="60" r="6" fill="rgba(255,255,255,0.8)"/>
+        <circle cx="80" cy="60" r="6" fill="rgba(255,255,255,0.8)"/>
+    </g>
+    
+    <!-- Title overlay -->
+    <rect x="0" y="240" width="400" height="60" fill="rgba(0,0,0,0.5)"/>
+    <text x="200" y="270" text-anchor="middle" fill="white" font-size="18" font-family="Arial" font-weight="bold">
+        Carte Interactive
+    </text>
+</svg>

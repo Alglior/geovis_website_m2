@@ -1,0 +1,177 @@
+{% extends "base.html" %}
+
+{% block title %}GeoVis Galaxy - Univers des Cartes Interactives{% endblock %}
+
+{% block description %}Découvrez l'univers des cartes web interactives et des applications géospatiales dans une expérience 3D époustouflante{% endblock %}
+
+{% block content %}
+    <!-- Effets d'arrière-plan -->
+    <canvas id="particles-canvas"></canvas>
+    
+    <!-- Section Hero avec Terre 3D -->
+    <section id="hero-section" class="hero-section">
+        <canvas id="heroCanvas"></canvas>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="gradient-text">GeoVis Galaxy</span>
+                </h1>
+                <h2 class="hero-subtitle">
+                    Explorez l'Univers des Cartes Web Interactives
+                </h2>
+                <p class="hero-description">
+                    Découvrez des applications géospatiales époustouflantes, des visualisations interactives 
+                    et les technologies de cartographie web les plus avancées dans notre collection soigneusement sélectionnée.
+                </p>
+                <div class="hero-cta">
+                    <button class="btn-primary cta-button" onclick="document.getElementById('maps-section').scrollIntoView({behavior: 'smooth'})">
+                        Explorer les Cartes
+                    </button>
+                    <button class="btn-secondary" onclick="document.getElementById('features-section').scrollIntoView({behavior: 'smooth'})">
+                        En Savoir Plus
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Cartes -->
+    <section id="maps-section" class="maps-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Collection de Cartes Interactives</h2>
+                <p class="section-description">
+                    Parcourez notre collection soigneusement sélectionnée de cartes web interactives et d'applications géospatiales
+                </p>
+            </div>
+            
+            <!-- Racine de l'application React -->
+            <div id="react-root" class="react-app-container">
+                <!-- Les composants React seront montés ici -->
+                <div class="loading-placeholder">
+                    <div class="loading-spinner"></div>
+                    <p>Chargement des cartes interactives...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Fonctionnalités -->
+    <section id="features-section" class="features-section">
+        <div class="section-container">
+            <h2 class="section-title">Pourquoi Choisir GeoVis Galaxy ?</h2>
+            <div class="features-grid">
+
+                <div class="feature-card glass-effect">
+                    <div class="feature-icon">🗺️</div>
+                    <h3>Types de Cartes Diversifiés</h3>
+                    <p>De l'imagerie satellite aux cartes thématiques, des visualisations choroplèthes aux modèles de terrain 3D - explorez tous les types de visualisation géospatiale.</p>
+                </div>
+
+                <div class="feature-card glass-effect">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Insights Basés sur les Données</h3>
+                    <p>Chaque carte raconte une histoire à travers la visualisation de données, vous aidant à comprendre des patterns géographiques complexes et des relations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À Propos -->
+    <section id="about-section" class="about-section">
+        <div class="section-container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">À Propos de GeoVis Galaxy</h2>
+                    <p class="about-description">
+                        GeoVis Galaxy est une plateforme innovante dédiée à l'exploration et à la visualisation des données géospatiales.
+                        Ce site a été créé dans le cadre d'un projet du Master de Géographie Numérique de Lyon 2 et de l'Université Jean Monnet,
+                        réalisé par Arthur Thibaudon, étudiant en M2.
+                    </p>
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <span class="stat-number" id="about-total-maps">{{ stats.total_maps }}</span>
+                            <span class="stat-label">Cartes Référencées</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <span class="placeholder-icon">🌍</span>
+                        <p>Visualisation Interactive</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact-section" class="contact-section">
+        <div class="section-container">
+            <h2 class="section-title">Contactez-Nous</h2>
+            <p class="contact-description">
+                Vous avez des questions, des suggestions ou souhaitez collaborer ?
+                N'hésitez pas à nous contacter !
+            </p>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>Email</h3>
+                        <p>Cliquez sur l'adresse email ci-dessous pour la copier :</p>
+                        <div class="email-copy">
+                            <code id="email-address">arthur.univ@proton.me</code>
+                            <button class="copy-btn" onclick="copyEmail()" title="Copier l'email">
+                                📋
+                            </button>
+                        </div>
+                        <p class="copy-feedback" id="copy-feedback"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Function to update stats on the page
+function updateStats() {
+    fetch('/api/stats')
+        .then(response => response.json())
+        .then(data => {
+            // Update hero section stats
+            const totalMapsDisplay = document.getElementById('total-maps-display');
+            const totalCategoriesDisplay = document.getElementById('total-categories-display');
+            const aboutTotalMaps = document.getElementById('about-total-maps');
+            
+            if (totalMapsDisplay) {
+                totalMapsDisplay.textContent = data.total_maps;
+            }
+            if (totalCategoriesDisplay) {
+                totalCategoriesDisplay.textContent = data.total_categories;
+            }
+            if (aboutTotalMaps) {
+                aboutTotalMaps.textContent = data.total_maps;
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching stats:', error);
+        });
+}
+
+// Update stats when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    updateStats();
+    
+    // Update stats every 30 seconds
+    setInterval(updateStats, 30000);
+    
+    // Also update when page becomes visible again (user returns to tab)
+    document.addEventListener('visibilitychange', function() {
+        if (!document.hidden) {
+            updateStats();
+        }
+    });
+});
+</script>
+{% endblock %}

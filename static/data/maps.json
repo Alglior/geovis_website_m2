@@ -1,0 +1,573 @@
+{
+  "maps": [
+    {
+      "id": 1,
+      "title": "Carte Interactive du Climat Mondial",
+      "description": [
+        "Une visualisation interactive des données climatiques mondiales avec des couches de température, précipitations et vent en temps réel.",
+        "Cette application permet d'explorer les phénomènes météorologiques à l'échelle planétaire grâce à des données satellite actualisées en continu.",
+        "Les utilisateurs peuvent naviguer dans différentes couches atmosphériques et visualiser les courants océaniques, les vents, les températures et bien plus encore."
+      ],
+      "thumbnail": "/static/images/thumbnails/map-1.png",
+      "images": [
+        {
+          "url": "/static/images/mondiale_climat/chimie atmospherique.png",
+          "title": "Chimie Atmosphérique"
+        },
+        {
+          "url": "/static/images/mondiale_climat/mode_biologie_BAA_surcoucheFEU.png",
+          "title": "Mode Biologie"
+        },
+        {
+          "url": "/static/images/mondiale_climat/mode_meteo_spatiale.png",
+          "title": "Météo Spatiale"
+        },
+        {
+          "url": "/static/images/mondiale_climat/mode_particules.png",
+          "title": "Mode Particules"
+        },
+        {
+          "url": "/static/images/mondiale_climat/ocean.png",
+          "title": "Océan"
+        },
+        {
+          "url": "/static/images/mondiale_climat/legende.png",
+          "title": "Légende"
+        }
+      ],
+      "url": "https://earth.nullschool.net/fr/",
+      "category": "Climatologie",
+      "difficulty": "Intermédiaire",
+      "auteur": "Cameron Beccario",
+      "sources": ["NOAA", "GFS", "OSCAR"],
+      "fonctionalites": [
+        "Visualisation en temps réel des données météorologiques",
+        "Sélection de multiples couches atmosphériques",
+        "Affichage des vents, températures et précipitations",
+        "Navigation 3D du globe",
+        "Zoom et pan interactif",
+        "Animation des prévisions météo"
+      ],
+      "analyse": "Cette carte excelle dans la communication visuelle des phénomènes climatiques complexes. Les indicateurs de Maceachren (Communication: 75, Tâche: 70, Interaction: 80) reflètent son interface intuitive et ses fortes capacités interactives. Idéale pour l'enseignement et la sensibilisation climatique.",
+      "avis": [
+        "Excellente carte pour comprendre les phénomènes climatiques globaux. Interface intuitive et données précises.",
+        "Les visualisations en temps réel sont particulièrement impressionnantes et permettent de suivre l'évolution des conditions météorologiques à l'échelle planétaire.",
+        "Un outil pédagogique exceptionnel pour l'enseignement de la climatologie."
+      ],
+      "tags": [
+        "Climat",
+        "Temps réel",
+        "Météo",
+        "Global"
+      ],
+      "maceachren": {
+        "communication": 75,
+        "task": 70,
+        "interaction": 80
+      }
+    },
+    {
+      "id": 2,
+      "title": "OpenStreetMap France",
+      "description": "Carte collaborative libre du territoire français avec des données détaillées sur les transports, commerces et services.",
+      "thumbnail": "/static/images/thumbnails/map-2.png",
+      "url": "https://www.openstreetmap.org/#map=6/46.449/2.210",
+      "category": "Navigation",
+      "difficulty": "Débutant",
+      "fonctionalites": [
+        "Navigation détaillée du territoire français",
+        "Couches personnalisables (transports, commerces, services)",
+        "Recherche d'adresses et de lieux",
+        "Itinéraires routiers et transports publics",
+        "Édition collaborative des données",
+        "Export de cartes"
+      ],
+      "analyse": "Plateforme collaborative offrant une richesse de données détaillées sur la France. Les scores Maceachren modérés (Communication: 60, Tâche: 40, Interaction: 50) reflètent son interface fonctionnelle mais moins sophistiquée. Excellente pour la navigation pratique et la découverte locale.",
+      "avis": "Carte communautaire très complète, parfaite pour la navigation et la découverte locale.",
+      "tags": [
+        "Navigation",
+        "France",
+        "Collaboratif",
+        "Transport"
+      ],
+      "maceachren": {
+        "communication": 60,
+        "task": 40,
+        "interaction": 50
+      }
+    },
+    {
+      "id": 3,
+      "title": "Radio Garden - Radios du Monde",
+      "description": "Globe interactif 3D permettant d'écouter des milliers de stations de radio en direct à travers le monde entier.",
+      "thumbnail": "/static/images/thumbnails/map-3.png",
+      "url": "http://radio.garden/",
+      "category": "Technologie",
+      "difficulty": "Débutant",
+      "fonctionalites": [
+        "Navigation 3D du globe terrestre",
+        "Écoute en direct de milliers de stations radio",
+        "Recherche par localisation géographique",
+        "Playlist et favoris",
+        "Enregistrement des émissions",
+        "Informations sur les stations radio"
+      ],
+      "analyse": "Une application innovante combinant géographie et culture médiatique. L'interaction exceptionnelle (80) et la communication visuelle (65) en font un outil mémorable. Format audio combiné avec l'interface 3D offre une expérience utilisateur unique et ludique.",
+      "avis": "Concept brillant et addictif ! Voyage sonore captivant autour du monde. Interface magnifique.",
+      "tags": [
+        "Radio",
+        "Audio",
+        "Culture",
+        "Interactif"
+      ],
+      "maceachren": {
+        "communication": 65,
+        "task": 60,
+        "interaction": 70
+      }
+    },
+    {
+      "id": 4,
+      "title": "Atlas Démographique Interactif",
+      "description": "Analyse démographique mondiale avec pyramides des âges, migration et évolution de la population par pays.",
+      "thumbnail": "/static/images/thumbnails/map-4.png",
+      "url": "https://www.worldometers.info/world-population/",
+      "category": "Démographie",
+      "difficulty": "Intermédiaire",
+      "fonctionalites": [
+        "Pyramides des âges interactives par pays",
+        "Projections démographiques futures",
+        "Statistiques de migration",
+        "Comparaison entre pays",
+        "Graphiques d'évolution temporelle",
+        "Données par régions et continents"
+      ],
+      "analyse": "Outil statistique robuste pour l'analyse démographique mondiale. Les scores Maceachren (Communication: 70, Tâche: 55, Interaction: 50) indiquent une plateforme efficace pour la présentation de données chiffrées. Particulièrement utile pour les analyses socio-démographiques complexes.",
+      "avis": "Très utile pour comprendre les tendances démographiques. Interface claire et données actualisées.",
+      "tags": [
+        "Population",
+        "Démographie",
+        "Statistiques",
+        "Social"
+      ],
+      "maceachren": {
+        "communication": 70,
+        "task": 55,
+        "interaction": 50
+      }
+    },
+    {
+      "id": 5,
+      "title": "Carte des Feux de Forêt en Temps Réel",
+      "description": "Surveillance globale des incendies de forêt avec détection satellite et prévisions de propagation.",
+      "thumbnail": "/static/images/thumbnails/map-5.png",
+      "url": "https://firms.modaps.eosdis.nasa.gov/map/",
+      "category": "Environnement",
+      "difficulty": "Intermédiaire",
+      "fonctionalites": [
+        "Détection satellite des foyers d'incendie en temps réel",
+        "Classification par intensité et magnitude",
+        "Historique des incendies",
+        "Alertes et notifications",
+        "Prévisions de propagation",
+        "Données NASA FIRMS actualisées",
+        "Cartographie des zones à risque"
+      ],
+      "analyse": "Système de surveillance critique utilisant les données satellites NASA. Les scores élevés (Communication: 75, Tâche: 70, Interaction: 65) reflètent son importance pour les alertes environnementales. Interface professionnelle adaptée aux experts et aux autorités de gestion des crises.",
+      "avis": "Outil essentiel pour le suivi environnemental. Données NASA fiables et interface professionnelle.",
+      "tags": [
+        "Incendies",
+        "Satellite",
+        "NASA",
+        "Environnement"
+      ],
+      "maceachren": {
+        "communication": 75,
+        "task": 70,
+        "interaction": 65
+      }
+    },
+    {
+      "id": 6,
+      "title": "Commute time in Europe",
+      "description": "Une carte qui montre les temps de trajets domicile-travail en Europe avec les infrastructures de transport et l'accessibilité régionale.",
+      "thumbnail": "/static/images/thumbnails/commute-time-in-europe.png",
+      "url": "https://landgeist.com/2024/11/30/commute-time-in-europe/",
+      "category": "Transport",
+      "difficulty": "Débutant",
+      "fonctionalites": [
+        "Visualisation des temps de trajets par région",
+        "Code couleur pour les durées de trajet",
+        "Données d'accessibilité",
+        "Comparaison entre villes européennes",
+        "Informations sur les transports disponibles",
+        "Analyse des infrastructures"
+      ],
+      "analyse": "Analyse géospatiale de la mobilité européenne. Les données présentées offrent des insights sur l'accessibilité régionale et la qualité de vie. Cette cartographie illustre les inégalités d'accessibilité à travers le continent et leur impact sur les modes de vie urbains.",
+      "avis": "Fascinant pour les passionnés de géographie urbaine. Collection de données impressive sur les trajets européens.",
+      "tags": [
+        "Transport",
+        "Accessibilité",
+        "Europe",
+        "Urbanisme"
+      ],
+      "maceachren": {
+        "communication": 60,
+        "task": 65,
+        "interaction": 55
+      }
+    },
+    {
+      "id": 7,
+      "title": "Pollution de l'Air Mondiale",
+      "description": "Surveillance en temps réel de la qualité de l'air avec indices AQI, particules fines et prévisions.",
+      "thumbnail": "/static/images/thumbnails/map-7.png",
+      "url": "https://www.iqair.com/earth",
+      "category": "Environnement",
+      "difficulty": "Débutant",
+      "fonctionalites": [
+        "Index de qualité de l'air (AQI) en temps réel",
+        "Mesure des particules fines PM2.5 et PM10",
+        "Alertes de pollution",
+        "Historique de la qualité de l'air",
+        "Prévisions sur 7 jours",
+        "Recommandations de santé personnalisées"
+      ],
+      "analyse": "Application de surveillance environnementale orientée santé publique. Les scores Maceachren (Communication: 70, Tâche: 65, Interaction: 55) indiquent une interface efficace et accessible. Combine données scientifiques fiables avec présentation intuitive, essentielle pour la sensibilisation aux enjeux de qualité de l'air urbain.",
+      "avis": "Interface simple et efficace pour surveiller la pollution. Données précises et alertes utiles.",
+      "tags": [
+        "Pollution",
+        "AQI",
+        "Santé",
+        "Temps réel"
+      ],
+      "maceachren": {
+        "communication": 70,
+        "task": 65,
+        "interaction": 55
+      }
+    },
+    {
+      "id": 8,
+      "title": "Trafic Maritime Global",
+      "description": "Visualisation en temps réel du trafic maritime mondial avec positions des navires et routes commerciales.",
+      "thumbnail": "/static/images/thumbnails/map-8.png",
+      "url": "https://www.marinetraffic.com/",
+      "category": "Transport",
+      "difficulty": "Intermédiaire",
+      "fonctionalites": [
+        "Positionnement GPS en temps réel des navires",
+        "Informations détaillées sur chaque navire (type, tonnage, destination)",
+        "Tracés des routes commerciales",
+        "Filtre par type de navire ou compagnie",
+        "Historique des trajets",
+        "Prévisions de transit",
+        "Alertes de trafic et incidents"
+      ],
+      "analyse": "Plateforme professionnelle de surveillance du commerce maritime mondial. Les scores équilibrés (Communication: 70, Tâche: 60, Interaction: 60) reflètent son efficacité dans le suivi des opérations logistiques complexes. Essential pour les professionnels du transport maritime et de la supply chain.",
+      "avis": "Incroyable de voir le trafic maritime en direct. Très utile pour le commerce et la logistique.",
+      "tags": [
+        "Maritime",
+        "Navires",
+        "Commerce",
+        "Logistique"
+      ],
+      "maceachren": {
+        "communication": 70,
+        "task": 60,
+        "interaction": 60
+      }
+    },
+    {
+      "id": 9,
+      "title": "Villes et Urbanisation Mondiale",
+      "description": "Visualisation de la croissance urbaine mondiale avec densité de population, mégalopoles et expansion des villes.",
+      "thumbnail": "/static/images/thumbnails/map-9.png",
+      "url": "https://luminocity3d.org/WorldCity/#3/12.00/10.00",
+      "category": "Démographie",
+      "difficulty": "Intermédiaire",
+      "fonctionalites": [
+        "Visualisation 3D du relief urbain",
+        "Représentation proportionnelle de la densité de population",
+        "Zoom interactif jusqu'au niveau des rues",
+        "Identification des mégalopoles mondiales",
+        "Comparaison de la croissance urbaine",
+        "Animation temporelle de l'expansion urbaine"
+      ],
+      "analyse": "Représentation exceptionnelle de la géographie urbaine mondiale par visualisation 3D volumétrique. Le score d'interaction élevé (75) et de tâche (75) reflètent l'efficacité de cette approche pour comprendre les dynamiques urbaines. Particulièrement pertinent pour les urbanistes, géographes et décideurs politiques.",
+      "avis": "Visualisation 3D spectaculaire de l'urbanisation mondiale. Perspective unique sur la densité urbaine.",
+      "tags": [
+        "Villes",
+        "Urbanisation",
+        "3D",
+        "Population"
+      ],
+      "maceachren": {
+        "communication": 65,
+        "task": 75,
+        "interaction": 55
+      }
+    },
+    {
+      "id": 10,
+      "title": "Séismes en Temps Réel",
+      "description": "Monitoring global de l'activité sismique avec magnitude, profondeur et alertes tsunami.",
+      "thumbnail": "/static/images/thumbnails/map-10.png",
+      "url": "https://earthquake.usgs.gov/earthquakes/map/",
+      "category": "Géologie",
+      "difficulty": "Intermédiaire",
+      "fonctionalites": [
+        "Détection en temps réel des séismes mondiaux",
+        "Magnitude, profondeur et localisation précise",
+        "Code couleur par intensité",
+        "Alertes tsunami associées",
+        "Historique sismique détaillé",
+        "Données USGS validées scientifiquement",
+        "Cartographie des zones de risque sismique"
+      ],
+      "analyse": "Système critique de surveillance géosismique basé sur les données officielles de l'USGS. L'excellent score de communication (80) reflète la clarté de sa présentation pour un public large. Combines rigueur scientifique avec accessibilité, essentiel pour la prévention des risques naturels.",
+      "avis": "Données USGS très fiables. Interface claire pour suivre l'activité sismique mondiale.",
+      "tags": [
+        "Séismes",
+        "USGS",
+        "Géologie",
+        "Alertes"
+      ],
+      "maceachren": {
+        "communication": 80,
+        "task": 70,
+        "interaction": 50
+      }
+    },
+    {
+      "id": 11,
+      "title": "Migration des Animaux",
+      "description": "Suivi des migrations animales avec trajets GPS, espèces menacées et corridors écologiques.",
+      "thumbnail": "/static/images/thumbnails/map-11.png",
+      "url": "https://www.movebank.org/",
+      "category": "Biologie",
+      "difficulty": "Avancé",
+      "fonctionalites": [
+        "Suivi GPS en temps réel des animaux",
+        "Trajectoires historiques détaillées",
+        "Identification des corridors écologiques",
+        "Données spécifiques par espèce",
+        "Analyse des patterns de migration",
+        "Alertes sur les espèces menacées",
+        "Collaboration scientifique et données ouvertes"
+      ],
+      "analyse": "Plateforme de recherche scientifique de haut niveau pour l'écologie comportementale. Le score de tâche exceptionnellement élevé (80) reflète sa sophistication analytique. Combine données de biosurveillance avancées avec accessibilité pour la communauté scientifique et conservationnistes.",
+      "avis": "Fascinant de suivre les migrations animales. Excellent pour la recherche en écologie.",
+      "tags": [
+        "Migration",
+        "Animaux",
+        "GPS",
+        "Écologie"
+      ],
+      "maceachren": {
+        "communication": 60,
+        "task": 80,
+        "interaction": 65
+      }
+    },
+    {
+      "id": 12,
+      "title": "Trafic Aérien en Direct",
+      "description": "Suivi en temps réel des vols commerciaux et privés dans le monde entier avec informations détaillées sur chaque appareil.",
+      "thumbnail": "/static/images/thumbnails/map-12.png",
+      "url": "https://www.flightradar24.com/",
+      "category": "Transport",
+      "difficulty": "Débutant",
+      "fonctionalites": [
+        "Suivi en temps réel des aéronefs",
+        "Informations détaillées (altitude, vitesse, compagnie, type d'appareil)",
+        "Trajectoires et historique des vols",
+        "Filtres par compagnie aérienne ou type d'avion",
+        "Alertes de décollage et d'atterrissage",
+        "Informations aéroportuaires",
+        "Notifications push personnalisées"
+      ],
+      "analyse": "Application grand public pour le suivi aérien combinant données ADS-B professionnelles avec interface conviviale. Les scores élevés (Communication: 75, Interaction: 70) reflètent son succès auprès du grand public. Crée une expérience ludique d'un domaine techniquement complexe.",
+      "avis": "Application impressionnante pour suivre les avions en temps réel. Interface fluide et informations complètes.",
+      "tags": [
+        "Aviation",
+        "Vols",
+        "Temps réel",
+        "Transport"
+      ],
+      "maceachren": {
+        "communication": 75,
+        "task": 55,
+        "interaction": 70
+      }
+    },
+    {
+      "id": 13,
+      "title": "Câbles Sous-Marins Internet",
+      "description": "Carte interactive des câbles sous-marins qui transportent 99% du trafic internet intercontinental.",
+      "thumbnail": "/static/images/thumbnails/map-13.png",
+      "url": "https://www.submarinecablemap.com/",
+      "category": "Technologie",
+      "difficulty": "Intermédiaire",
+      "fonctionalites": [
+        "Cartographie des 500+ câbles sous-marins",
+        "Détails techniques des câbles (bande passante, longueur)",
+        "État opérationnel des liaisons",
+        "Points de connexion et îles desservies",
+        "Historique de déploiement des câbles",
+        "Schémas de capacité",
+        "Vulnérabilités et redondance des routes"
+      ],
+      "analyse": "Visualisation critique de l'infrastructure internet mondiale souterraine. Les scores Maceachren modérés (Communication: 65, Tâche: 60, Interaction: 45) reflètent son approche techniques pour experts. Révèle les dépendances géostratégiques cachées de la connectivité mondiale.",
+      "avis": "Révélateur de l'infrastructure internet mondiale. Très instructif sur la connectivité globale.",
+      "tags": [
+        "Internet",
+        "Infrastructure",
+        "Câbles",
+        "Technologie"
+      ],
+      "maceachren": {
+        "communication": 65,
+        "task": 60,
+        "interaction": 45
+      }
+    },
+    {
+      "id": 14,
+      "title": "Déforestation dans le monde",
+      "description": "Surveillance satellite de la déforestation dans le monde avec données historiques et alertes en temps réel.",
+      "thumbnail": "/static/images/thumbnails/map-14.png",
+      "url": "https://www.globalforestwatch.org/map/?map=eyJkYXRhc2V0cyI6W3siZGF0YXNldCI6ImludGVncmF0ZWQtZGVmb3Jlc3RhdGlvbi1hbGVydHMtOGJpdCIsIm9wYWNpdHkiOjEsInZpc2liaWxpdHkiOnRydWUsImxheWVycyI6WyJpbnRlZ3JhdGVkLWRlZm9yZXN0YXRpb24tYWxlcnRzLThiaXQiXX0seyJkYXRhc2V0IjoicG9saXRpY2FsLWJvdW5kYXJpZXMiLCJsYXllcnMiOlsiZGlzcHV0ZWQtcG9saXRpY2FsLWJvdW5kYXJpZXMiLCJwb2xpdGljYWwtYm91bmRhcmllcyJdLCJvcGFjaXR5IjoxLCJ2aXNpYmlsaXR5Ijp0cnVlfV19&mapMenu=eyJkYXRhc2V0Q2F0ZWdvcnkiOiJmb3Jlc3RDaGFuZ2UifQ%3D%3D",
+      "category": "Environnement",
+      "difficulty": "Intermédiaire",
+      "fonctionalites": [
+        "Détection satellite de la déforestation en temps réel",
+        "Alertes GLAD actualisées mensuellement",
+        "Historique de perte forestière depuis 2001",
+        "Couches d'analyse (concessions, aires protégées)",
+        "Données de couvert forestier par région",
+        "Prévisions de déforestation",
+        "Téléchargement de données pour analyse"
+      ],
+      "analyse": "Outil d'intelligence environnementale de premier plan pour le suivi de la déforestation mondiale. Les scores élevés (Communication: 80, Tâche: 75) reflètent son efficacité pour les décideurs. Fusion de données satellites avec analyse géospatiale pour l'action environnementale.",
+      "avis": "Outil crucial pour la protection des forêts. Données satellite précises et actualisées régulièrement.",
+      "tags": [
+        "Forêts",
+        "Déforestation",
+        "Amazonie",
+        "Conservation"
+      ],
+      "maceachren": {
+        "communication": 80,
+        "task": 75,
+        "interaction": 60
+      }
+    },
+    {
+      "id": 15,
+      "title": "Énergie Éolienne et Solaire",
+      "description": "Carte mondiale des installations d'énergie renouvelable avec production en temps réel et statistiques.",
+      "thumbnail": "/static/images/thumbnails/map-15.png",
+      "url": "https://www.electricitymap.org/",
+      "category": "Énergie",
+      "difficulty": "Intermédiaire",
+      "fonctionalites": [
+        "Production électrique en temps réel par région",
+        "Pourcentage d'énergie renouvelable",
+        "Intensité carbone de l'électricité",
+        "Mix énergétique détaillé (charbon, gaz, solaire, éolien)",
+        "Historique des émissions carbone",
+        "Comparaison entre pays",
+        "Prévisions de demande énergétique"
+      ],
+      "analyse": "Plateforme de transparence énergétique pour la transition bas-carbone. Les scores équilibrés (Communication: 70, Tâche: 65, Interaction: 55) indiquent sa capacité à transformer des données complexes en insights accessibles. Essential pour comprendre et accélérer la décarbonisation.",
+      "avis": "Excellent pour comprendre la transition énergétique. Visualisation claire de l'empreinte carbone.",
+      "tags": [
+        "Énergie",
+        "Renouvelable",
+        "Électricité",
+        "Carbone"
+      ],
+      "maceachren": {
+        "communication": 70,
+        "task": 65,
+        "interaction": 55
+      }
+    },
+    {
+      "id": 16,
+      "title": "Récifs Coralliens et Océans",
+      "description": "Atlas interactif des récifs coralliens avec état de santé, blanchissement et biodiversité marine.",
+      "thumbnail": "/static/images/thumbnails/map-16.png",
+      "url": "https://allencoralatlas.org/atlas/",
+      "category": "Océanographie",
+      "difficulty": "Avancé",
+      "fonctionalites": [
+        "Cartographie haute résolution des récifs coralliens",
+        "Évaluation de l'état de santé des coraux",
+        "Monitoring du blanchissement",
+        "Cartographie de la biodiversité marine",
+        "Données d'élévation bathymétrique",
+        "Analyse des menaces océaniques",
+        "Données de température marine"
+      ],
+      "analyse": "Atlas scientifique pour la conservation marine combinant cartographie spatiale haute résolution avec analyse écologique avancée. Les scores modérés reflètent sa complexité technique orientée vers la recherche. Outil critique pour documenter l'impact du changement climatique sur les écosystèmes marins.",
+      "avis": "Ressource exceptionnelle pour l'étude des océans. Cartographie haute résolution des récifs.",
+      "tags": [
+        "Corail",
+        "Océan",
+        "Biodiversité",
+        "Conservation"
+      ],
+      "maceachren": {
+        "communication": 65,
+        "task": 70,
+        "interaction": 60
+      }
+    },
+    {
+      "id": 17,
+      "title": "Éclairage Nocturne Mondial",
+      "description": "Carte satellite de la pollution lumineuse mondiale montrant l'urbanisation et l'activité humaine nocturne.",
+      "thumbnail": "/static/images/thumbnails/map-17.png",
+      "url": "https://www.lightpollutionmap.info/",
+      "category": "Environnement",
+      "difficulty": "Débutant",
+      "fonctionalites": [
+        "Carte mondiale de la pollution lumineuse",
+        "Données satellite de luminosité nocturne",
+        "Classification des zones sombres et urbaines",
+        "Historique de l'évolution de l'éclairage",
+        "Prévisions du passage de la Station Spatiale International",
+        "Filtres personnalisés pour l'astronomie",
+        "Données d'empreinte écologique lumineuse"
+      ],
+      "analyse": "Application interdisciplinaire combinant astronomie, environnement et urbanisme. Les scores modérés reflètent son usage spécialisé par astronomes et chercheurs. Illustre de manière spectaculaire l'impact invisible de l'urbanisation sur l'écosystème nocturne.",
+      "avis": "Impressionnant de voir l'impact de l'éclairage urbain. Utile pour l'astronomie amateur.",
+      "tags": [
+        "Lumière",
+        "Pollution",
+        "Urbanisation",
+        "Astronomie"
+      ],
+      "maceachren": {
+        "communication": 60,
+        "task": 55,
+        "interaction": 45
+      }
+    }
+  ],
+  "categories": [
+    "Navigation",
+    "Climatologie",
+    "Océanographie",
+    "Démographie",
+    "Environnement",
+    "Histoire",
+    "Transport",
+    "Technologie",
+    "Géologie",
+    "Biologie",
+    "Énergie"
+  ]
+}

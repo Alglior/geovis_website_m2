@@ -312,38 +312,37 @@
       }
     },
     {
-      "id": 8,
-      "mode": "2d",
-      "title": "Trafic Maritime Global",
-      "description": "Visualisation en temps réel du trafic maritime mondial avec positions des navires et routes commerciales.",
-      "thumbnail": "/static/images/thumbnails/map-8.png",
-      "url": "https://www.marinetraffic.com/",
-      "category": "Transport",
-      "difficulty": "Intermédiaire",
-      "fonctionalites": [
-        "Positionnement GPS en temps réel des navires",
-        "Informations détaillées sur chaque navire (type, tonnage, destination)",
-        "Tracés des routes commerciales",
-        "Filtre par type de navire ou compagnie",
-        "Historique des trajets",
-        "Prévisions de transit",
-        "Alertes de trafic et incidents"
-      ],
-      "analyse": "Plateforme professionnelle de surveillance du commerce maritime mondial. Les scores équilibrés (Communication: 70, Tâche: 60, Interaction: 60) reflètent son efficacité dans le suivi des opérations logistiques complexes. Essential pour les professionnels du transport maritime et de la supply chain.",
-      "critique": "L'accès aux données historiques complètes et aux fonctionnalités avancées nécessite un abonnement payant. Certains navires militaires ou privés peuvent désactiver leur transpondeur AIS, créant des zones aveugles. La surcharge visuelle dans les zones de fort trafic (détroits, ports majeurs) peut rendre la navigation difficile.",
-      "avis": "Incroyable de voir le trafic maritime en direct. Très utile pour le commerce et la logistique.",
-      "tags": [
-        "Maritime",
-        "Navires",
-        "Commerce",
-        "Logistique"
-      ],
-      "maceachren": {
-        "communication": 70,
-        "task": 60,
-        "interaction": 60
-      }
-    },
+    "id": 8,
+    "mode": "2d",
+    "title": "Accès à l'électricité en Afrique subsaharienne (2022)",
+    "description": "Carte choroplète montrant le pourcentage de la population ayant accès à l'électricité dans les pays d'Afrique subsaharienne, basée sur les données de la Banque mondiale.",
+    "thumbnail": "/static/images/thumbnails/access-to-electricity-ssa.png",
+    "url": "https://ourworldindata.org/data-insights/a-vast-majority-of-people-still-lack-access-to-electricity-in-parts-of-sub-saharan-africa",
+    "category": "Développement Durable",
+    "difficulty": "Facile",
+    "fonctionalites": [
+      "Visualisation par codes couleurs (échelle de brun à jaune)",
+      "Indication textuelle des pourcentages pour les pays critiques (Niger, Tchad, Sud-Soudan, RD Congo)",
+      "Définition standardisée de l'accès à l'électricité incluse",
+      "Légende quantitative par paliers de 10%",
+      "Source de données certifiée (World Bank 2022)"
+    ],
+    "analyse": "Cette carte thématique utilise une progression séquentielle de couleurs pour illustrer les disparités énergétiques. Elle met en évidence que dans plusieurs pays d'Afrique centrale et de l'Est, moins de 25% de la population dispose d'un accès de base. La force de cette visualisation réside dans sa clarté immédiate pour communiquer une problématique de développement majeure.",
+    "critique": "En tant que carte statique, elle ne permet pas d'observer l'évolution temporelle ni de zoomer sur les disparités entre zones urbaines et rurales, ce qui est crucial pour ce sujet. Les données sont agrégées au niveau national, masquant les poches de développement localisées.",
+    "avis": "Un outil pédagogique puissant qui rend les statistiques de pauvreté énergétique tangibles et immédiatement compréhensibles pour le grand public.",
+    "tags": [
+      "Énergie",
+      "Afrique",
+      "Développement",
+      "Électricité",
+      "Inégalités"
+    ],
+    "maceachren": {
+      "communication": 90,
+      "task": 30,
+      "interaction": 0
+    }
+  },
       {
     "id": 9,
     "mode": "interactive",

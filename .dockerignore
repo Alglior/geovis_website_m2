@@ -1,0 +1,80 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Documentation
+*.md
+DEPLOYMENT.md
+README.md
+MODES_IMPLEMENTATION.md
+prompt.md
+
+# Scripts
+*.sh
+deploy.sh
+start.sh
+start.bat
+stop_production.sh
+restart_production.sh
+view_logs.sh
+undeploy.sh
+
+# Config files
+gunicorn_config.py
+
+# Screenshots and captures
+capture_screenshots.py
+screenshots/
+
+# Temporary files
+*.tmp
+*.bak
+.cache/

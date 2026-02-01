@@ -720,39 +720,44 @@
     "interaction": 90
   }
 },
-    {
-      "id": 14,
-      "mode": "2d",
-      "title": "Déforestation dans le monde",
-      "description": "Surveillance satellite de la déforestation dans le monde avec données historiques et alertes en temps réel.",
-      "thumbnail": "/static/images/thumbnails/map-14.png",
-      "url": "https://www.globalforestwatch.org/map/?map=eyJkYXRhc2V0cyI6W3siZGF0YXNldCI6ImludGVncmF0ZWQtZGVmb3Jlc3RhdGlvbi1hbGVydHMtOGJpdCIsIm9wYWNpdHkiOjEsInZpc2liaWxpdHkiOnRydWUsImxheWVycyI6WyJpbnRlZ3JhdGVkLWRlZm9yZXN0YXRpb24tYWxlcnRzLThiaXQiXX0seyJkYXRhc2V0IjoicG9saXRpY2FsLWJvdW5kYXJpZXMiLCJsYXllcnMiOlsiZGlzcHV0ZWQtcG9saXRpY2FsLWJvdW5kYXJpZXMiLCJwb2xpdGljYWwtYm91bmRhcmllcyJdLCJvcGFjaXR5IjoxLCJ2aXNpYmlsaXR5Ijp0cnVlfV19&mapMenu=eyJkYXRhc2V0Q2F0ZWdvcnkiOiJmb3Jlc3RDaGFuZ2UifQ%3D%3D",
-      "category": "Environnement",
-      "difficulty": "Intermédiaire",
-      "fonctionalites": [
-        "Détection satellite de la déforestation en temps réel",
-        "Alertes GLAD actualisées mensuellement",
-        "Historique de perte forestière depuis 2001",
-        "Couches d'analyse (concessions, aires protégées)",
-        "Données de couvert forestier par région",
-        "Prévisions de déforestation",
-        "Téléchargement de données pour analyse"
-      ],
-      "analyse": "Outil d'intelligence environnementale de premier plan pour le suivi de la déforestation mondiale. Les scores élevés (Communication: 80, Tâche: 75) reflètent son efficacité pour les décideurs. Fusion de données satellites avec analyse géospatiale pour l'action environnementale.",
-      "critique": "La résolution spatiale des alertes (30m) peut manquer la déforestation de petite échelle. La couverture nuageuse tropicale peut créer des lacunes dans les données. La complexité de l'interface et la multitude de couches disponibles nécessitent une formation pour une utilisation optimale. Le délai de traitement satellitaire peut retarder la détection de plusieurs jours.",
-      "avis": "Outil crucial pour la protection des forêts. Données satellite précises et actualisées régulièrement.",
-      "tags": [
-        "Forêts",
-        "Déforestation",
-        "Amazonie",
-        "Conservation"
-      ],
-      "maceachren": {
-        "communication": 80,
-        "task": 75,
-        "interaction": 60
-      }
-    },
+   {
+  "id": 14,
+  "mode": "2d",
+  "title": "Les Uns sur les Autres : Densité typographique en Île-de-France",
+  "description": "Carte typographique représentant la densité de population des communes d'Île-de-France. Les formes géographiques des communes sont remplacées par leur nom, dont la taille et la couleur varient selon la concentration d'habitants.",
+  "thumbnail": "/static/images/thumbnails/19_Typographie_web_hd.jpg",
+  "auteur": ["Vincent Heau - IGN "],
+  "source": [
+    "INSEE 2020",
+    "WorldPop 2020"
+  ],
+  "url": "https://www.ign.fr/files/default/2024-11/19_Typographie_web_hd.jpg",
+  "category": "Démographie",
+  "difficulty": "Grand Public",
+  "fonctionalites": [
+    "Visualisation de la densité par échelle typographique",
+    "Code couleur quantitatif (7 500 à 25 000+ hab/km²)",
+    "Représentation des communes de plus de 7500 hab/km²",
+    "Mise en évidence de la structure concentrique de l'agglomération parisienne",
+    "Comparaison visuelle immédiate entre Paris intra-muros et la petite couronne"
+  ],
+  "analyse": "Cette carte s'inscrit dans le cadre du #30DayMapChallenge (Jour 19 - Typographie). Elle utilise la technique du 'Word Cloud Map' pour transformer une donnée statistique froide (la densité) en une représentation organique. Le titre 'Les uns sur les autres' renforce le message de saturation urbaine. La hiérarchie visuelle est très forte : Paris domine par sa taille et sa couleur sombre, entourée d'une couronne dense qui s'effrite vers la périphérie.",
+  "critique": "Bien que l'esthétique soit réussie et pédagogique pour comprendre la macro-structure de la région, la précision géographique est sacrifiée au profit du design. Les frontières exactes des communes sont floues. Les petites communes périphériques sont difficiles à lire. La carte exclut les zones moins denses (< 7500 hab/km²), créant un effet d'archipel qui ne reflète pas la continuité réelle du bâti, mais uniquement les pics de densité.",
+  "avis": "Excellente illustration de vulgarisation. Elle permet de saisir en un coup d'œil l'intensité de la vie urbaine parisienne sans avoir besoin de lire une légende complexe.",
+  "tags": [
+    "Île-de-France",
+    "Paris",
+    "Densité de population",
+    "Typographie",
+    "DataViz",
+    "Urbanisme"
+  ],
+  "maceachren": {
+    "communication": 90,
+    "task": 30,
+    "interaction": 0
+  }
+},
 {
   "id": 15,
   "mode": "interactive",

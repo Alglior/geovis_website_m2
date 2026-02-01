@@ -279,38 +279,60 @@
       "interaction": 0
     }
   },
-    {
-      "id": 7,
-      "mode": "2d",
-      "title": "Pollution de l'Air Mondiale",
-      "description": "Surveillance en temps réel de la qualité de l'air avec indices AQI, particules fines et prévisions.",
-      "thumbnail": "/static/images/thumbnails/map-7.png",
-      "url": "https://www.iqair.com/earth",
-      "category": "Environnement",
-      "difficulty": "Débutant",
-      "fonctionalites": [
-        "Index de qualité de l'air (AQI) en temps réel",
-        "Mesure des particules fines PM2.5 et PM10",
-        "Alertes de pollution",
-        "Historique de la qualité de l'air",
-        "Prévisions sur 7 jours",
-        "Recommandations de santé personnalisées"
-      ],
-      "analyse": "Application de surveillance environnementale orientée santé publique. Les scores Maceachren (Communication: 70, Tâche: 65, Interaction: 55) indiquent une interface efficace et accessible. Combine données scientifiques fiables avec présentation intuitive, essentielle pour la sensibilisation aux enjeux de qualité de l'air urbain.",
-      "critique": "La densité des stations de mesure varie considérablement selon les régions, avec une couverture limitée dans les pays en développement. Les algorithmes de prévision peuvent parfois être imprécis lors de conditions météorologiques changeantes. L'application commerciale propose des fonctionnalités premium, ce qui limite l'accès aux données complètes.",
-      "avis": "Interface simple et efficace pour surveiller la pollution. Données précises et alertes utiles.",
-      "tags": [
-        "Pollution",
-        "AQI",
-        "Santé",
-        "Temps réel"
-      ],
-      "maceachren": {
-        "communication": 70,
-        "task": 65,
-        "interaction": 55
+      {
+    "id": 7,
+    "mode": "interactive",
+    "title": "Cartogramme de la population mondiale 2018",
+    "description": "Une série de cartogrammes où la taille de chaque pays est déformée pour représenter sa population totale. Chaque carré représente 500 000 personnes, offrant une visualisation de la densité humaine mondiale par rapport à la géographie physique.",
+    "thumbnail": "/static/images/thumbnails/Population-cartogram_World.png",
+    "url": "https://ourworldindata.org/world-population-cartogram",
+    "images": [
+      {
+        "url": "/static/images/pop_cartogram/Population-cartogram_Africa.png",
+        "title": "Carte Afrique"
+      },
+      {
+        "url": "/static/images/pop_cartogram/Population-cartogram_Americas.png",
+        "title": "Carte Amérique"
+      },
+      {
+        "url": "/static/images/pop_cartogram/Population-cartogram_Europe.png",
+        "title": "Carte Europe"
+      },
+      {
+        "url": "/static/images/pop_cartogram/Population-cartogram_Asia-and-Oceania.png",
+        "title": "Carte Asie-Océanie"
+      },
+            {
+        "url": "/static/images/thumbnails/Population-cartogram_World.png",
+        "title": "Carte Globale"
       }
-    },
+    ],
+    "category": "Démographie",
+    "difficulty": "Intermédiaire",
+    "fonctionalites": [
+      "Représentation proportionnelle : 1 carré = 500 000 habitants",
+      "Décomposition régionale détaillée (Afrique, Europe, Amériques, Asie-Océanie)",
+      "Chiffres de population totale par pays intégrés directement sur la carte",
+      "Comparaison visuelle immédiate entre poids démographique et superficie géographique",
+      "Notes contextuelles (ex: population de l'Asie partagée par la Russie, poids de l'Inde et de la Chine)"
+    ],
+    "analyse": "Cet ensemble de cartes utilise une technique de cartogramme à grille pour corriger le biais visuel des cartes traditionnelles où les grands pays vides (comme le Canada ou la Russie) dominent visuellement. Ici, l'Inde et la Chine occupent la place centrale qu'elles ont réellement en termes de population humaine. C'est un outil d'analyse structurelle de la répartition de l'humanité.",
+    "critique": "Le format statique empêche l'exploration de données plus fines (villes, régions internes). La distorsion géographique peut rendre certains petits pays difficiles à localiser pour un public non averti. L'absence d'interactivité limite la comparaison temporelle dynamique, bien que les données de 2018 soient clairement sourcées.",
+    "avis": "Absolument fascinant pour réaliser que la carte du monde 'humaine' est radicalement différente de la carte 'physique'. Un incontournable pour comprendre les enjeux géopolitiques mondiaux.",
+    "tags": [
+      "Démographie",
+      "Population",
+      "Cartogramme",
+      "Statistiques",
+      "Géopolitique"
+    ],
+    "maceachren": {
+      "communication": 95,
+      "task": 25,
+      "interaction": 5
+    }
+  },
     {
     "id": 8,
     "mode": "2d",

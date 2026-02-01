@@ -819,72 +819,74 @@
     "interaction": 92
   }
 },
-    {
-      "id": 16,
-      "mode": "2d",
-      "title": "Récifs Coralliens et Océans",
-      "description": "Atlas interactif des récifs coralliens avec état de santé, blanchissement et biodiversité marine.",
-      "thumbnail": "/static/images/thumbnails/map-16.png",
-      "url": "https://allencoralatlas.org/atlas/",
-      "category": "Océanographie",
-      "difficulty": "Avancé",
-      "fonctionalites": [
-        "Cartographie haute résolution des récifs coralliens",
-        "Évaluation de l'état de santé des coraux",
-        "Monitoring du blanchissement",
-        "Cartographie de la biodiversité marine",
-        "Données d'élévation bathymétrique",
-        "Analyse des menaces océaniques",
-        "Données de température marine"
-      ],
-      "analyse": "Atlas scientifique pour la conservation marine combinant cartographie spatiale haute résolution avec analyse écologique avancée. Les scores modérés reflètent sa complexité technique orientée vers la recherche. Outil critique pour documenter l'impact du changement climatique sur les écosystèmes marins.",
-      "critique": "La complexité de l'interface rend l'outil peu accessible aux non-experts. La couverture est inégale, privilégiant les zones déjà bien étudiées. Les données de santé des coraux ne sont pas toujours actualisées en temps réel. Les performances de chargement peuvent être lentes pour les zones à haute résolution, nécessitant une connexion internet robuste.",
-      "avis": "Ressource exceptionnelle pour l'étude des océans. Cartographie haute résolution des récifs.",
-      "tags": [
-        "Corail",
-        "Océan",
-        "Biodiversité",
-        "Conservation"
-      ],
-      "maceachren": {
-        "communication": 65,
-        "task": 70,
-        "interaction": 60
-      }
-    },
-    {
-      "id": 17,
-      "mode": "2d",
-      "title": "Éclairage Nocturne Mondial",
-      "description": "Carte satellite de la pollution lumineuse mondiale montrant l'urbanisation et l'activité humaine nocturne.",
-      "thumbnail": "/static/images/thumbnails/map-17.png",
-      "url": "https://www.lightpollutionmap.info/",
-      "category": "Environnement",
-      "difficulty": "Débutant",
-      "fonctionalites": [
-        "Carte mondiale de la pollution lumineuse",
-        "Données satellite de luminosité nocturne",
-        "Classification des zones sombres et urbaines",
-        "Historique de l'évolution de l'éclairage",
-        "Prévisions du passage de la Station Spatiale International",
-        "Filtres personnalisés pour l'astronomie",
-        "Données d'empreinte écologique lumineuse"
-      ],
-      "analyse": "Application interdisciplinaire combinant astronomie, environnement et urbanisme. Les scores modérés reflètent son usage spécialisé par astronomes et chercheurs. Illustre de manière spectaculaire l'impact invisible de l'urbanisation sur l'écosystème nocturne.",
-      "critique": "Les données satellitaires peuvent dater de plusieurs années, ne reflétant pas les changements récents d'infrastructure. L'interactivité limitée (principalement zoom et pan) restreint les possibilités d'analyse. La visualisation ne distingue pas entre différents types de pollution lumineuse (LED vs. sodium). L'absence de données temporelles empêche de suivre l'évolution historique précise.",
-      "avis": "Impressionnant de voir l'impact de l'éclairage urbain. Utile pour l'astronomie amateur.",
-      "tags": [
-        "Lumière",
-        "Pollution",
-        "Urbanisation",
-        "Astronomie"
-      ],
-      "maceachren": {
-        "communication": 60,
-        "task": 55,
-        "interaction": 45
-      }
-    }
+   {
+  "id": 16,
+  "mode": "2d",
+  "title": "Perméabilité de l'occupation du sol à Paris",
+  "description": "Cartographie thématique bicolore illustrant la distinction entre surfaces imperméables (bâti, routes) et surfaces perméables (végétation, eau) dans l'enceinte de Paris et ses bois limitrophes.",
+  "auteur": "Pierre Philippe (IGN)",
+  "sources": ["Perméabilité de l'occupation du sol à Paris (Données OCS GE IGN)"],
+  "thumbnail": "/static/images/thumbnails/22novembre_2_couleurs_web_hd.jpg",
+  "url": "http://ign.fr/files/default/2024-11/22novembre_2_couleurs_web_hd.jpg",
+  "category": "Urbanisme & Environnement",
+  "difficulty": "Débutant",
+  "fonctionalites": [
+    "Distinction binaire entre zones perméables (vert) et imperméables (gris)",
+    "Répartition statistique détaillée des sols : zones bâties (45.3%), non bâties (24%), peuplements d'arbres (16.2%), etc.",
+    "Visualisation de la structure urbaine dense vs les poumons verts (Bois de Boulogne et Vincennes)",
+    "Échelle graphique pour mesure de distance",
+    "Source de données haute précision (OCS GE IGN 2021)"
+  ],
+  "analyse": "Produite pour le #30DayMapChallenge 2024, cette carte utilise un design minimaliste '2 couleurs' pour mettre en exergue la fragmentation de la nature en milieu urbain. Elle révèle une ville dominée à près de 70% par l'imperméabilité (minéral), tout en soulignant l'importance écologique des parcs et des alignements d'arbres pour la gestion des eaux pluviales et la lutte contre les îlots de chaleur urbains.",
+  "critique": "L'esthétique bicolore est percutante mais peut masquer des nuances importantes (ex: la différence entre un jardin privé et un parc public). La lecture des statistiques en bas de page est légèrement gênée par l'inclinaison du texte. L'absence de toponymes facilite la lecture structurelle mais rend la localisation précise de quartiers spécifiques difficile pour un non-Parisien.",
+  "avis": "Un excellent exemple de cartographie de synthèse qui transforme des données complexes en un message visuel immédiat et politique sur la place de la nature en ville.",
+  "tags": [
+    "Paris",
+    "Urbanisme",
+    "Écologie",
+    "Perméabilité",
+    "IGN"
+  ],
+  "maceachren": {
+    "communication": 90,
+    "task": 45,
+    "interaction": 10
+  }
+},
+{
+  "id": 17,
+  "mode": "2d",
+  "title": "Évolution de la surface de la banquise arctique (1984-2024)",
+  "description": "Visualisation comparative de l'étendue minimale de la glace de mer en Arctique au mois de septembre, illustrant quatre décennies de fonte.",
+    "auteur": "Marie Stretti (IGN)",
+  "sources": ["National Snow and Ice Data Center (NSIDC)"],
+  "thumbnail": "/static/images/thumbnails/arctic_v3_web_hdd.jpg",
+  "url": "https://www.ign.fr/files/default/2024-11/arctic_v3_web_hdd.jpg",
+  "category": "Climatologie",
+  "difficulty": "Intermédiaire",
+  "fonctionnalites": [
+    "Comparaison temporelle par superposition de contours (isoplèthes)",
+    "Indicateur de perte de surface relative (-35%)",
+    "Chronologie décennale (1984, 1994, 2004, 2014, 2024)",
+    "Projection polaire centrée sur le pôle Nord",
+    "Échelle graphique (500 km)"
+  ],
+  "analyse": "Réalisée dans le cadre du #30DayMapChallenge, cette carte utilise une sémiologie efficace pour illustrer le changement climatique. En isolant le minimum annuel de septembre, elle rend la tendance structurelle de la fonte de la banquise immédiatement visible, avec une réduction de surface de 35% par rapport à 1984.",
+  "critique": "La carte se concentre sur l'étendue de surface. Bien que visuellement percutante pour la communication, elle ne montre pas la perte d'épaisseur (glace pluriannuelle), qui est un indicateur de fragilité tout aussi crucial. L'interactivité est inexistante car il s'agit d'une production infographique statique.",
+  "avis": "Une excellente synthèse visuelle qui transforme des données complexes du NSIDC en un message clair et pédagogique porté par le design de l'IGN.",
+  "tags": [
+    "Arctique",
+    "Banquise",
+    "Changement Climatique",
+    "Environnement",
+    "IGN"
+  ],
+  "maceachren": {
+    "communication": 95,
+    "task": 70,
+    "interaction": 0
+  }
+}
   ],
   "categories": [
     "Navigation",

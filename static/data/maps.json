@@ -668,39 +668,58 @@
         "interaction": 95
       }
     },
+   {
+  "id": 13,
+  "mode": "interactive",
+  "title": "Submarine Cable Map",
+  "description": "Une cartographie interactive exhaustive de l'infrastructure physique mondiale de l'Internet, recensant les câbles sous-marins et leurs stations d'atterrissement.",
+  "thumbnail": "/static/images/thumbnails/map-13.png",
+  "url": "https://www.submarinecablemap.com/",
+  "images": [
     {
-      "id": 13,
-      "mode": "2d",
-      "title": "Câbles Sous-Marins Internet",
-      "description": "Carte interactive des câbles sous-marins qui transportent 99% du trafic internet intercontinental.",
-      "thumbnail": "/static/images/thumbnails/map-13.png",
-      "url": "https://www.submarinecablemap.com/",
-      "category": "Technologie",
-      "difficulty": "Intermédiaire",
-      "fonctionalites": [
-        "Cartographie des 500+ câbles sous-marins",
-        "Détails techniques des câbles (bande passante, longueur)",
-        "État opérationnel des liaisons",
-        "Points de connexion et îles desservies",
-        "Historique de déploiement des câbles",
-        "Schémas de capacité",
-        "Vulnérabilités et redondance des routes"
-      ],
-      "analyse": "Visualisation critique de l'infrastructure internet mondiale souterraine. Les scores Maceachren modérés (Communication: 65, Tâche: 60, Interaction: 45) reflètent son approche techniques pour experts. Révèle les dépendances géostratégiques cachées de la connectivité mondiale.",
-      "critique": "L'interface statique offre peu d'interactivité avancée. Les informations techniques peuvent être obsolètes pour certains câbles plus anciens. L'absence de données sur les capacités réelles utilisées limite l'analyse de la congestion. La représentation 2D simplifie excessivement la complexité tridimensionnelle des installations sous-marines.",
-      "avis": "Révélateur de l'infrastructure internet mondiale. Très instructif sur la connectivité globale.",
-      "tags": [
-        "Internet",
-        "Infrastructure",
-        "Câbles",
-        "Technologie"
-      ],
-      "maceachren": {
-        "communication": 65,
-        "task": 60,
-        "interaction": 45
-      }
+      "url": "/static/images/submarine_cables/carte_globale.png",
+      "title": "Carte Globale"
     },
+    {
+      "url": "/static/images/submarine_cables/details.png",
+      "title": "Liste des câbles"
+    },
+    {
+      "url": "/static/images/submarine_cables/details_plus.png",
+      "title": "Détails techniques d'un câble spécifique"
+    },
+    {
+      "url": "/static/videos/cables_sous_marin.webm",
+      "title": "Démonstration"
+    }
+  ],
+  "category": "Infrastructure & Géopolitique",
+  "difficulty": "Intermédiaire",
+  "fonctionalites": [
+    "Visualisation exhaustive des routes de fibre optique transcontinentales (plus de 500 systèmes)",
+    "Identification des consortiums propriétaires (Google, Meta, Orange, etc.) et des fournisseurs",
+    "Fiche technique par câble : longueur totale, date de mise en service et stations d'atterrissement",
+    "Recherche multicritères : par nom de câble, par pays, par point d'atterrissage ou par année",
+    "Historique des déploiements permettant d'observer l'évolution du réseau depuis les années 1990",
+    "Interactivité géographique permettant de cliquer sur n'importe quel point pour voir ses connexions",
+    "Mises à jour régulières basées sur les données de TeleGeography (référence de l'industrie)"
+  ],
+  "analyse": "La Submarine Cable Map transforme une infrastructure invisible en une réalité tangible. C'est un outil hybride : il sert de ressource pédagogique pour comprendre la géographie du web et d'outil stratégique pour analyser la dépendance numérique des nations. L'interface permet de visualiser instantanément les goulots d'étranglement mondiaux (comme le canal de Suez ou le détroit de Malacca). Le score de tâche est élevé car il permet une analyse critique des flux de données et de la souveraineté numérique.",
+  "critique": "L'un des points noirs majeurs concerne l'absence de données de trafic en temps réel (débit utilisé vs capacité théorique), les informations restant purement structurelles. La densité des câbles dans certaines zones (Europe du Nord, Asie du Sud-Est) rend la sélection individuelle parfois difficile sans un zoom excessif, ce qui peut ralentir la navigation. De plus, bien que visuellement riche, l'outil ne détaille pas les incidents de rupture de câbles en direct pour des raisons de sécurité.",
+  "avis": "L'outil de référence absolue pour la géographie des télécommunications. Malgré une interface qui peut devenir complexe par zone saturée, la précision des données de propriété et de tracé est inégalée pour le grand public.",
+  "tags": [
+    "Télécoms",
+    "Géopolitique",
+    "Fibre Optique",
+    "Data",
+    "Infrastructure"
+  ],
+  "maceachren": {
+    "communication": 50,
+    "task": 80,
+    "interaction": 90
+  }
+},
     {
       "id": 14,
       "mode": "2d",
@@ -734,39 +753,72 @@
         "interaction": 60
       }
     },
+{
+  "id": 15,
+  "mode": "interactive",
+  "title": "Évolution mondiale du taux de fécondité effectif (1751-2023)",
+  "description": "Cette visualisation interactive retrace plus de 270 ans d'histoire démographique. Elle illustre le nombre d'enfants par femme atteignant l'âge de procréer, en tenant compte des taux de survie historiques. L'outil met en lumière la transition démographique mondiale et l'amélioration spectaculaire de la survie infantile au fil des siècles.",
+  "thumbnail": "/static/images/thumbnails/effective-fertility-rate-children-per-woman-who-are-expected-to-survive-until-childbearing-age.png",
+  "url": "https://ourworldindata.org/grapher/effective-fertility-rate-children-per-woman-who-are-expected-to-survive-until-childbearing-age",
+  "images": [
     {
-      "id": 15,
-      "mode": "2d",
-      "title": "Énergie Éolienne et Solaire",
-      "description": "Carte mondiale des installations d'énergie renouvelable avec production en temps réel et statistiques.",
-      "thumbnail": "/static/images/thumbnails/map-15.png",
-      "url": "https://www.electricitymap.org/",
-      "category": "Énergie",
-      "difficulty": "Intermédiaire",
-      "fonctionalites": [
-        "Production électrique en temps réel par région",
-        "Pourcentage d'énergie renouvelable",
-        "Intensité carbone de l'électricité",
-        "Mix énergétique détaillé (charbon, gaz, solaire, éolien)",
-        "Historique des émissions carbone",
-        "Comparaison entre pays",
-        "Prévisions de demande énergétique"
-      ],
-      "analyse": "Plateforme de transparence énergétique pour la transition bas-carbone. Les scores équilibrés (Communication: 70, Tâche: 65, Interaction: 55) indiquent sa capacité à transformer des données complexes en insights accessibles. Essential pour comprendre et accélérer la décarbonisation.",
-      "critique": "La couverture géographique est limitée principalement à l'Europe, l'Amérique du Nord et quelques pays développés, excluant de nombreuses régions clés. Les méthodes de calcul de l'intensité carbone peuvent varier selon les sources, créant des incohérences. Les données en temps réel dépendent de la disponibilité des API des opérateurs de réseau, qui peut être inégale.",
-      "avis": "Excellent pour comprendre la transition énergétique. Visualisation claire de l'empreinte carbone.",
-      "tags": [
-        "Énergie",
-        "Renouvelable",
-        "Électricité",
-        "Carbone"
-      ],
-      "maceachren": {
-        "communication": 70,
-        "task": 65,
-        "interaction": 55
-      }
+      "url": "/static/images/thumbnails/effective-fertility-rate-children-per-woman-who-are-expected-to-survive-until-childbearing-age.png",
+      "title": "Carte Mondiale Interactive"
     },
+    {
+      "url": "/static/images/fertility/graph.png",
+      "title": "Graphique en Ligne"
+    },
+        {
+      "url": "/static/images/fertility/graph_bar.png",
+      "title": "Graphique en Barres"
+    },
+    {
+      "url": "/static/images/fertility/about_section.png",
+      "title": "Sources et Méthodologie détaillée"
+    },
+    {
+      "url": "/static/images/fertility/table.png",
+      "title": "Tableau des Données Sources"
+    },
+    {
+      "url": "/static/videos/fertility.webm",
+      "title": "Démonstration des Fonctionnalités",
+      "type": "video"
+    },
+      {
+      "url": "/static/videos/fertility_temporel.webm",
+      "title": "Animation de l'expansion des données (1751-2023)",
+      "type": "video"
+    }
+    
+  ],
+  "category": "Démographie",
+  "difficulty": "Intermédiaire",
+  "fonctionalites": [
+    "Curseur temporel haute précision permettant de naviguer de 1751 à nos jours",
+    "Lecture automatique (Play) pour visualiser l'expansion géographique des données au fil du temps",
+    "Comparaison dynamique entre pays via des graphiques linéaires et à barres",
+    "Tri multicritères : par taux de fécondité, PIB par habitant ou population",
+    "Accès complet aux données sources (UN, Human Mortality Database, etc.)",
+    "Visualisation de l'apparition progressive des registres nationaux (ex: Suède dès 1751)"
+  ],
+  "analyse": "L'ajout de la dimension temporelle transforme cette carte en un outil de recherche historique puissant. On observe non seulement la chute des taux de fécondité, mais aussi l'histoire de la statistique elle-même : le passage d'une donnée isolée (Suède en 1751) à une couverture mondiale quasi complète après 1950. Cette capacité à lier développement économique et survie biologique en une seule animation justifie une réévaluation des scores d'interaction et de communication.",
+  "critique": "L'animation révèle un biais historique majeur : l'absence presque totale de données pour l'hémisphère Sud avant le XXe siècle, rendant les comparaisons globales impossibles pour les périodes anciennes. De plus, la fluidité de l'animation peut parfois masquer les marges d'erreur importantes inhérentes aux reconstructions historiques du XVIIIe siècle.",
+  "avis": "Un chef-d'œuvre de datavisualisation qui rend palpable l'évolution de l'humanité sur le temps long.",
+  "tags": [
+    "Démographie",
+    "Histoire",
+    "Fécondité",
+    "Transition démographique",
+    "Big Data"
+  ],
+  "maceachren": {
+    "communication": 95,
+    "task": 90,
+    "interaction": 92
+  }
+},
     {
       "id": 16,
       "mode": "2d",

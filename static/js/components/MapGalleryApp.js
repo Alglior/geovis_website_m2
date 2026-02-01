@@ -73,16 +73,22 @@ const MapGalleryApp = () => {
             return { communication: 50, task: 50, interaction: 50 };
         }
         
-        const mapsWithData = filteredMaps.filter(map => map.maceachren);
+        // Only use maps that have actual maceachren data (don't use default 50 for missing data)
+        const mapsWithData = filteredMaps.filter(map => map.maceachren && 
+            (map.maceachren.communication !== undefined || 
+             map.maceachren.task !== undefined || 
+             map.maceachren.interaction !== undefined));
+        
         if (mapsWithData.length === 0) {
             return { communication: 50, task: 50, interaction: 50 };
         }
 
         const sum = mapsWithData.reduce(
             (acc, map) => ({
-                communication: acc.communication + (map.maceachren.communication || 50),
-                task: acc.task + (map.maceachren.task || 50),
-                interaction: acc.interaction + (map.maceachren.interaction || 50)
+                // Use actual values from map data, not defaults
+                communication: acc.communication + (map.maceachren.communication !== undefined ? map.maceachren.communication : 0),
+                task: acc.task + (map.maceachren.task !== undefined ? map.maceachren.task : 0),
+                interaction: acc.interaction + (map.maceachren.interaction !== undefined ? map.maceachren.interaction : 0)
             }),
             { communication: 0, task: 0, interaction: 0 }
         );

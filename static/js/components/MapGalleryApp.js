@@ -51,13 +51,18 @@ const MapGalleryApp = () => {
         fetchData();
     }, []);
 
-    // Filter maps based on category and search
+    // Filter maps based on mode and search
     const filteredMaps = React.useMemo(() => {
         return maps.filter(map => {
-            const matchesCategory = selectedCategory === 'Toutes' || map.category === selectedCategory;
-            const matchesSearch = map.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                                map.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                                map.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+            const matchesCategory = selectedCategory === 'Toutes' || map.mode === selectedCategory;
+
+            const descriptionText = Array.isArray(map.description)
+                ? map.description.join(' ').toLowerCase()
+                : (map.description || '').toLowerCase();
+
+            const matchesSearch = (map.title || '').toLowerCase().includes(searchTerm.toLowerCase()) ||
+                                descriptionText.includes(searchTerm.toLowerCase()) ||
+                                (map.tags || []).some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
             return matchesCategory && matchesSearch;
         });
     }, [maps, selectedCategory, searchTerm]);

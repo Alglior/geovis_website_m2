@@ -3,7 +3,7 @@ const CategoryFilter = ({ categories, selectedCategory, onCategoryChange }) => {
     return React.createElement('div', {
         className: 'category-filter'
     }, [
-        React.createElement('h3', { key: 'title' }, 'Catégories'),
+        React.createElement('h3', { key: 'title' }, 'Modes'),
         React.createElement('div', {
             className: 'filter-buttons',
             key: 'buttons'

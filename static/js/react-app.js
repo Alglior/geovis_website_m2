@@ -302,7 +302,9 @@ const MapModal = ({ map, isOpen, onClose }) => {
                     key: 'info'
                 }, [
                     React.createElement('h3', { key: 'desc-title' }, 'Description'),
-                    React.createElement('p', { key: 'description' }, map.description),
+                    React.createElement('p', { key: 'description' }, 
+                        Array.isArray(map.description) ? map.description.join(' ') : map.description
+                    ),
                     React.createElement('h3', { key: 'cat-title' }, 'Catégorie'),
                     React.createElement('p', { key: 'category' }, map.category),
                     map.avis ? React.createElement('div', { key: 'avis-section' }, [
@@ -372,7 +374,9 @@ const MapCard = ({ map, onOpenModal }) => {
             key: 'content'
         }, [
             React.createElement('h3', { key: 'title' }, map.title),
-            React.createElement('p', { key: 'description' }, map.description),
+            React.createElement('p', { key: 'description' }, 
+                Array.isArray(map.description) ? map.description[0] : map.description
+            ),
             React.createElement('div', {
                 className: 'map-tags',
                 key: 'tags'
@@ -406,7 +410,7 @@ const CategoryFilter = ({ categories, selectedCategory, onCategoryChange }) => {
     return React.createElement('div', {
         className: 'category-filter'
     }, [
-        React.createElement('h3', { key: 'title' }, 'Catégories'),
+        React.createElement('h3', { key: 'title' }, 'Modes'),
         React.createElement('div', {
             className: 'filter-buttons',
             key: 'buttons'
@@ -442,6 +446,8 @@ const SearchBar = ({ searchTerm, onSearchChange }) => {
 
 // Main App Component
 const MapGalleryApp = () => {
+    console.log('MapGalleryApp - Component mounted');
+    
     const [maps, setMaps] = React.useState([]);
     const [categories, setCategories] = React.useState([]);
     const [stats, setStats] = React.useState({});
@@ -480,6 +486,12 @@ const MapGalleryApp = () => {
                 const categoriesData = await categoriesResponse.json();
                 const statsData = await statsResponse.json();
 
+                console.log('Données chargées:', {
+                    mapsCount: mapsData.maps?.length,
+                    categories: categoriesData,
+                    firstMap: mapsData.maps?.[0]
+                });
+
                 setMaps(mapsData.maps);
                 setCategories(categoriesData);
                 setStats(statsData);
@@ -493,15 +505,31 @@ const MapGalleryApp = () => {
         fetchData();
     }, []);
 
-    // Filter maps based on category and search
+    // Filter maps based on mode and search
     const filteredMaps = React.useMemo(() => {
-        return maps.filter(map => {
-            const matchesCategory = selectedCategory === 'Toutes' || map.category === selectedCategory;
+        console.log('Filtering maps:', {
+            totalMaps: maps.length,
+            selectedCategory: selectedCategory,
+            searchTerm: searchTerm,
+            firstMapMode: maps[0]?.mode
+        });
+        
+        const filtered = maps.filter(map => {
+            const matchesCategory = selectedCategory === 'Toutes' || map.mode === selectedCategory;
+            
+            // Handle description as either string or array
+            const descriptionText = Array.isArray(map.description) 
+                ? map.description.join(' ').toLowerCase() 
+                : (map.description || '').toLowerCase();
+            
             const matchesSearch = map.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                                map.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                                descriptionText.includes(searchTerm.toLowerCase()) ||
                                 map.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
             return matchesCategory && matchesSearch;
         });
+        
+        console.log('Filtered result:', filtered.length);
+        return filtered;
     }, [maps, selectedCategory, searchTerm]);
 
     if (loading) {
@@ -673,10 +701,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize React App
     setTimeout(() => {
         const appRoot = document.getElementById('react-root');
+        console.log('Looking for react-root:', appRoot);
         if (appRoot && window.React && window.ReactDOM) {
             console.log('Initializing React app...');
+            console.log('React:', typeof window.React);
+            console.log('ReactDOM:', typeof window.ReactDOM);
             const root = ReactDOM.createRoot(appRoot);
             root.render(React.createElement(MapGalleryApp));
+        } else {
+            console.error('React app failed to initialize:', {
+                appRoot: !!appRoot,
+                React: !!window.React,
+                ReactDOM: !!window.ReactDOM
+            });
         }
     }, 300);
     

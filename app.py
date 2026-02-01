@@ -226,11 +226,11 @@ def get_maps():
         page = int(request.args.get('page', 1))
         per_page = int(request.args.get('per_page', 100))  # Increased default to show all maps
         
-        # Filter maps based on category and search
+        # Filter maps based on mode and search
         filtered_maps = maps_data
         
         if category != 'Toutes':
-            filtered_maps = [m for m in filtered_maps if m['category'] == category]
+            filtered_maps = [m for m in filtered_maps if m['mode'] == category]
         
         if search:
             search_lower = search.lower()
@@ -256,17 +256,11 @@ def get_maps():
 
 @app.route('/api/categories')
 def get_categories():
-    """API endpoint to get all categories"""
+    """API endpoint to get all modes (2D and Interactive)"""
     try:
-        import json
-        import os
-        
-        json_path = os.path.join(app.static_folder, 'data', 'maps.json')
-        with open(json_path, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-        
-        categories = ['Toutes'] + data['categories']
-        return jsonify(categories)
+        # Return modes instead of thematic categories
+        modes = ['Toutes', '2d', 'interactive']
+        return jsonify(modes)
     except Exception as e:
         return jsonify(['Toutes'])
 

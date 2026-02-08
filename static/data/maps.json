@@ -40,7 +40,7 @@
       "category": "Climatologie",
       "difficulty": "Intermédiaire",
       "auteur": "Cameron Beccario",
-      "sources": ["NOAA", "GFS", "OSCAR"],
+      "sources": ["Earth Nullschool"],
       "fonctionalites": [
         "Visualisation en temps réel des données météorologiques",
         "Sélection de multiples couches atmosphériques",
@@ -902,18 +902,5 @@
     "interaction": 0
   }
 }
-  ],
-  "categories": [
-    "Navigation",
-    "Climatologie",
-    "Océanographie",
-    "Démographie",
-    "Environnement",
-    "Histoire",
-    "Transport",
-    "Technologie",
-    "Géologie",
-    "Biologie",
-    "Énergie"
   ]
 }

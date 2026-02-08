@@ -74,6 +74,7 @@
     "description": "Carte thématique montrant l'évolution démographique annuelle par pays. Elle met en lumière le contraste entre l'Europe de l'Ouest/Nord en croissance et l'Europe de l'Est/Sud en déclin, basée sur les données des Nations Unies (2024).",
     "thumbnail": "/static/images/thumbnails/population_change_europe.png",
     "url": "https://ourworldindata.org/data-insights/some-parts-of-europe-have-a-growing-population-while-others-are-shrinking",
+    "sources": ["Our World in Data"],
     "category": "Démographie",
     "difficulty": "Débutant",
     "fonctionalites": [
@@ -128,6 +129,7 @@
         }
       ],
       "url": "http://radio.garden/",
+      "sources": ["Radio Garden"],
       "category": "Technologie",
       "difficulty": "Débutant",
       "fonctionalites": [
@@ -160,6 +162,7 @@
       "description": "Cartographie officielle de la présence diplomatique et consulaire française, illustrant le troisième réseau mondial avec ses ambassades, consulats et représentations permanentes.",
       "thumbnail": "/static/images/thumbnails/ambassade_fr_monde.jpg",
       "url": "https://www.diplomatie.gouv.fr/IMG/jpg/postes_diplo_2026_cle068a1f.jpg",
+      "sources": ["Ministère de l'Europe et des Affaires étrangères"],
       "category": "Géopolitique",
       "difficulty": "Débutant",
       "fonctionalites": [
@@ -192,6 +195,7 @@
     "description": "Système de pointe de la NASA fournissant des données de surveillance des incendies actifs et des anomalies thermiques en temps quasi réel (LANCE), exploitant les capteurs MODIS et VIIRS.",
     "thumbnail": "/static/images/thumbnails/map-5.png",
     "url": "https://firms.modaps.eosdis.nasa.gov/map/",
+    "sources": ["NASA FIRMS"],
     "images":[
       {
           "url": "/static/images/feu/carte_globale.png",
@@ -254,8 +258,7 @@
     "url": "https://landgeist.com/2024/11/30/commute-time-in-europe/",
     "category": "Transport / Qualité de vie",
     "difficulty": "Débutant",
-    "auteur": "landgeist",
-    "sources": ["Eurostat"],
+    "sources": ["landgeist"],
     "fonctionalites": [
       "Visualisation des moyennes de trajet par pays (et non par région)",
       "Échelle de couleurs intuitive (gradient du jaune au rouge foncé)",
@@ -286,6 +289,7 @@
     "description": "Une série de cartogrammes où la taille de chaque pays est déformée pour représenter sa population totale. Chaque carré représente 500 000 personnes, offrant une visualisation de la densité humaine mondiale par rapport à la géographie physique.",
     "thumbnail": "/static/images/thumbnails/Population-cartogram_World.png",
     "url": "https://ourworldindata.org/world-population-cartogram",
+    "sources": ["Our World in Data"],
     "images": [
       {
         "url": "/static/images/pop_cartogram/Population-cartogram_Africa.png",
@@ -340,6 +344,7 @@
     "description": "Carte choroplète montrant le pourcentage de la population ayant accès à l'électricité dans les pays d'Afrique subsaharienne, basée sur les données de la Banque mondiale.",
     "thumbnail": "/static/images/thumbnails/access-to-electricity-ssa.png",
     "url": "https://ourworldindata.org/data-insights/a-vast-majority-of-people-still-lack-access-to-electricity-in-parts-of-sub-saharan-africa",
+    "sources": ["Our World in Data"],
     "category": "Développement Durable",
     "difficulty": "Facile",
     "fonctionalites": [
@@ -372,6 +377,7 @@
     "description": "Cartographie interactive illustrant la transformation urbaine mondiale, retraçant l'évolution des agglomérations du XXe siècle jusqu'aux projections de 2050.",
     "thumbnail": "/static/images/thumbnails/map-9.png",
     "url": "https://luminocity3d.org/WorldCity/",
+    "sources": ["Luminocity3D"],
     "images": [
       {
         "url": "/static/images/world_city_population/carte_globale.png",
@@ -493,6 +499,7 @@
       }
     ],
     "url": "https://earthquake.usgs.gov/earthquakes/map/",
+    "sources": ["USGS"],
     "category": "Géologie / Risques Naturels",
     "difficulty": "Intermédiaire",
     "auteur": "USGS",
@@ -526,6 +533,7 @@
       "description": "Une infrastructure de données interactive gérée par l'Institut Max Planck, regroupant plus de 9,6 milliards de localisations GPS et capteurs. Elle permet de visualiser, gérer et analyser les déplacements de milliers d'espèces à travers le globe en temps réel et via des archives historiques.",
       "thumbnail": "/static/images/thumbnails/map-11.png",
       "url": "https://www.movebank.org/cms/webapp?gwt_fragment=page=search_map",
+      "sources": ["Movebank"],
       "images": [
         {
           "url": "/static/images/animaux/carte_globale.png",
@@ -590,6 +598,7 @@
       "description": "Leader mondial du suivi de vols en temps réel, utilisant un réseau massif de récepteurs ADS-B pour visualiser le déplacement de plus de 200 000 vols quotidiens.",
       "thumbnail": "/static/images/thumbnails/map-12.png",
       "url": "https://www.flightradar24.com/",
+      "sources": ["Flightradar24"],
       "images": [
         {
           "url": "/static/images/avions/carte_globale.png",
@@ -675,6 +684,7 @@
   "description": "Une cartographie interactive exhaustive de l'infrastructure physique mondiale de l'Internet, recensant les câbles sous-marins et leurs stations d'atterrissement.",
   "thumbnail": "/static/images/thumbnails/map-13.png",
   "url": "https://www.submarinecablemap.com/",
+  "sources": ["submarinecablemap"],
   "images": [
     {
       "url": "/static/images/submarine_cables/carte_globale.png",
@@ -727,9 +737,8 @@
   "description": "Carte typographique représentant la densité de population des communes d'Île-de-France. Les formes géographiques des communes sont remplacées par leur nom, dont la taille et la couleur varient selon la concentration d'habitants.",
   "thumbnail": "/static/images/thumbnails/19_Typographie_web_hd.jpg",
   "auteur": ["Vincent Heau - IGN "],
-  "source": [
-    "INSEE 2020",
-    "WorldPop 2020"
+  "sources": [
+"IGN - Institut National de l'Information Géographique et Forestière"
   ],
   "url": "https://www.ign.fr/files/default/2024-11/19_Typographie_web_hd.jpg",
   "category": "Démographie",
@@ -765,6 +774,7 @@
   "description": "Cette visualisation interactive retrace plus de 270 ans d'histoire démographique. Elle illustre le nombre d'enfants par femme atteignant l'âge de procréer, en tenant compte des taux de survie historiques. L'outil met en lumière la transition démographique mondiale et l'amélioration spectaculaire de la survie infantile au fil des siècles.",
   "thumbnail": "/static/images/thumbnails/effective-fertility-rate-children-per-woman-who-are-expected-to-survive-until-childbearing-age.png",
   "url": "https://ourworldindata.org/grapher/effective-fertility-rate-children-per-woman-who-are-expected-to-survive-until-childbearing-age",
+  "sources": ["Our World in Data"],
   "images": [
     {
       "url": "/static/images/thumbnails/effective-fertility-rate-children-per-woman-who-are-expected-to-survive-until-childbearing-age.png",
@@ -830,7 +840,7 @@
   "title": "Perméabilité de l'occupation du sol à Paris",
   "description": "Cartographie thématique bicolore illustrant la distinction entre surfaces imperméables (bâti, routes) et surfaces perméables (végétation, eau) dans l'enceinte de Paris et ses bois limitrophes.",
   "auteur": "Pierre Philippe (IGN)",
-  "sources": ["Perméabilité de l'occupation du sol à Paris (Données OCS GE IGN)"],
+  "sources": ["IGN - Institut National de l'Information Géographique et Forestière"],
   "thumbnail": "/static/images/thumbnails/22novembre_2_couleurs_web_hd.jpg",
   "url": "http://ign.fr/files/default/2024-11/22novembre_2_couleurs_web_hd.jpg",
   "category": "Urbanisme & Environnement",
@@ -864,7 +874,7 @@
   "title": "Évolution de la surface de la banquise arctique (1984-2024)",
   "description": "Visualisation comparative de l'étendue minimale de la glace de mer en Arctique au mois de septembre, illustrant quatre décennies de fonte.",
     "auteur": "Marie Stretti (IGN)",
-  "sources": ["National Snow and Ice Data Center (NSIDC)"],
+  "sources": ["IGN - Institut National de l'Information Géographique et Forestière"],
   "thumbnail": "/static/images/thumbnails/arctic_v3_web_hdd.jpg",
   "url": "https://www.ign.fr/files/default/2024-11/arctic_v3_web_hdd.jpg",
   "category": "Climatologie",

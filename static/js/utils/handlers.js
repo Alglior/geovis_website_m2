@@ -118,7 +118,7 @@ function setupVerticalNavigation() {
     };
     
     const updateActiveSection = () => {
-        const sections = ['hero-section', 'maps-section', 'features-section', 'about-section', 'contact-section'];
+        const sections = ['hero-section', 'maps-section', 'global-cube-section', 'features-section', 'about-section', 'contact-section'];
         const navLinks = document.querySelectorAll('.vertical-nav-link');
         
         let currentSection = '';

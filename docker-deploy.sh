@@ -37,16 +37,20 @@ fi
 echo -e "${GREEN}Creating logs directory...${NC}"
 mkdir -p logs
 
-# Stop existing containers
+# Stop existing containers and remove volumes
 echo -e "${GREEN}Stopping existing containers...${NC}"
 $DOCKER_COMPOSE down 2>/dev/null || true
 
-# Build and start containers
-echo -e "${GREEN}Building Docker images...${NC}"
-$DOCKER_COMPOSE build
+# Remove old images (optional - uncomment to clean up old images)
+# echo -e "${GREEN}Removing old images...${NC}"
+# docker images | grep geovis_website_m2 | awk '{print $3}' | xargs -r docker rmi -f 2>/dev/null || true
 
-echo -e "${GREEN}Starting containers...${NC}"
-$DOCKER_COMPOSE up -d
+# Build and start containers
+echo -e "${GREEN}Building Docker images (no cache)...${NC}"
+$DOCKER_COMPOSE build --no-cache
+
+echo -e "${GREEN}Starting containers (force recreate)...${NC}"
+$DOCKER_COMPOSE up -d --force-recreate
 
 # Wait for services to be healthy
 echo ""

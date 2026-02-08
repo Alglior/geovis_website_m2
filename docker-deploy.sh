@@ -14,13 +14,6 @@ YELLOW='\033[1;33m'
 RED='\033[0;31m'
 NC='\033[0m'
 
-# Check if Docker is installed
-if ! command -v docker &> /dev/null; then
-    echo -e "${RED}Error: Docker is not installed.${NC}"
-    echo "Please install Docker first."
-    exit 1
-fi
-
 # Detect Docker Compose version (V2 "docker compose" or V1 "docker-compose")
 if docker compose version &> /dev/null; then
     DOCKER_COMPOSE="docker compose"

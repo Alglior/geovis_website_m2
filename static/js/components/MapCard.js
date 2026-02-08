@@ -8,6 +8,12 @@ const MapCard = ({ map, onOpenModal }) => {
         return text.substring(0, maxLength).trim() + '...';
     };
 
+    // Utiliser la version optimisée du thumbnail pour la galerie d'accueil
+    const getOptimizedThumbnail = (previewUrl) => {
+        if (!previewUrl) return '/static/images/default-map.svg';
+        return previewUrl.replace('/static/images/thumbnails/', '/static/images/thumbnails-optimized/');
+    };
+
     return React.createElement('div', {
         className: 'map-card glass-effect',
         key: map.id
@@ -17,7 +23,7 @@ const MapCard = ({ map, onOpenModal }) => {
             key: 'image'
         }, [
             React.createElement('img', {
-                src: map.preview || '/static/images/default-map.svg',
+                src: getOptimizedThumbnail(map.preview) || '/static/images/default-map.svg',
                 alt: map.title,
                 loading: 'lazy',
                 key: 'img'

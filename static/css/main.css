@@ -904,18 +904,26 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: var(--space-md);
+    overflow: hidden;
 }
 
 .placeholder-icon {
     font-size: 4rem;
     margin-bottom: var(--space-md);
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .placeholder-icon .earth-icon {
-    width: 150px;
-    height: 150px;
-    object-fit: contain;
-    display: inline-block;
+    width: 150px !important;
+    height: 150px !important;
+    max-width: 100% !important;
+    max-height: 150px !important;
+    object-fit: contain !important;
+    display: inline-block !important;
 }
 
 .image-placeholder p {
@@ -1086,11 +1094,14 @@ body {
     .image-placeholder {
         width: 250px;
         height: 250px;
+        padding: var(--space-sm);
     }
     
     .placeholder-icon .earth-icon {
-        width: 120px;
-        height: 120px;
+        width: 120px !important;
+        height: 120px !important;
+        max-width: 100% !important;
+        max-height: 120px !important;
     }
     
     .about-logos {
@@ -1129,11 +1140,14 @@ body {
     .image-placeholder {
         width: 200px;
         height: 200px;
+        padding: var(--space-xs);
     }
     
     .placeholder-icon .earth-icon {
-        width: 90px;
-        height: 90px;
+        width: 90px !important;
+        height: 90px !important;
+        max-width: 100% !important;
+        max-height: 90px !important;
     }
     
     .about-logos {

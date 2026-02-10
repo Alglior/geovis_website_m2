@@ -319,13 +319,13 @@ def get_stats():
         with open(json_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
         
-        maps_data = data['maps']
-        categories_data = data['categories']
+        maps_data = data.get('maps', [])
+        categories_data = data.get('categories', [])
         
         total_maps = len(maps_data)
-        total_categories = len(categories_data)
-        total_views = sum(m['views'] for m in maps_data)
-        avg_rating = sum(m['rating'] for m in maps_data) / total_maps if total_maps > 0 else 0
+        total_categories = len(categories_data) if categories_data else len(set(m.get('category', '') for m in maps_data))
+        total_views = sum(m.get('views', 0) for m in maps_data)
+        avg_rating = sum(m.get('rating', 0) for m in maps_data) / total_maps if total_maps > 0 else 0
         
         # Technology distribution (if available)
         tech_count = {}
@@ -337,7 +337,7 @@ def get_stats():
         # Category distribution
         category_count = {}
         for map_data in maps_data:
-            category = map_data['category']
+            category = map_data.get('category', 'Uncategorized')
             category_count[category] = category_count.get(category, 0) + 1
         
         return jsonify({
@@ -349,10 +349,11 @@ def get_stats():
             'category_distribution': category_count
         })
     except Exception as e:
+        print(f"Error loading stats: {e}")
         # Fallback to hardcoded data if JSON loading fails
         total_maps = len(MAPS_DATA)
-        total_views = sum(m['views'] for m in MAPS_DATA)
-        avg_rating = sum(m['rating'] for m in MAPS_DATA) / total_maps if total_maps > 0 else 0
+        total_views = sum(m.get('views', 0) for m in MAPS_DATA)
+        avg_rating = sum(m.get('rating', 0) for m in MAPS_DATA) / total_maps if total_maps > 0 else 0
         
         return jsonify({
             'total_maps': total_maps,

@@ -851,9 +851,12 @@ body {
 .about-logos img {
     height: 60px !important;
     width: auto !important;
-    object-fit: contain;
+    max-width: 200px !important;
+    min-width: auto !important;
+    object-fit: contain !important;
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
     display: block !important;
+    flex-shrink: 0;
 }
 
 .about-stats {
@@ -1097,6 +1100,8 @@ body {
     .about-logos img {
         height: 50px !important;
         width: auto !important;
+        max-width: 180px !important;
+        flex-shrink: 0;
     }
     
     .email-copy {
@@ -1139,6 +1144,8 @@ body {
     .about-logos img {
         height: 40px !important;
         width: auto !important;
+        max-width: 150px !important;
+        flex-shrink: 0;
     }
     
     .image-placeholder p {

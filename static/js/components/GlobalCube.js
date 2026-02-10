@@ -174,9 +174,32 @@ const GlobalCube = ({ config }) => {
 
         const onMouseUp = () => { isDragging = false; };
 
+        // Touch event handlers for mobile devices
+        const onTouchStart = (e) => {
+            if (e.touches.length === 1) {
+                isDragging = true;
+                previous = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+            }
+        };
+
+        const onTouchMove = (e) => {
+            if (!isDragging || e.touches.length !== 1) return;
+            e.preventDefault();
+            const dx = e.touches[0].clientX - previous.x;
+            const dy = e.touches[0].clientY - previous.y;
+            rotation.y += dx * 0.008;
+            rotation.x += dy * 0.008;
+            previous = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+        };
+
+        const onTouchEnd = () => { isDragging = false; };
+
         renderer.domElement.addEventListener('mousedown', onMouseDown);
         renderer.domElement.addEventListener('mousemove', onMouseMove);
         renderer.domElement.addEventListener('mouseup', onMouseUp);
+        renderer.domElement.addEventListener('touchstart', onTouchStart);
+        renderer.domElement.addEventListener('touchmove', onTouchMove, { passive: false });
+        renderer.domElement.addEventListener('touchend', onTouchEnd);
 
         const animate = () => {
             requestRef.current = requestAnimationFrame(animate);
@@ -202,6 +225,9 @@ const GlobalCube = ({ config }) => {
             renderer.domElement.removeEventListener('mousedown', onMouseDown);
             renderer.domElement.removeEventListener('mousemove', onMouseMove);
             renderer.domElement.removeEventListener('mouseup', onMouseUp);
+            renderer.domElement.removeEventListener('touchstart', onTouchStart);
+            renderer.domElement.removeEventListener('touchmove', onTouchMove);
+            renderer.domElement.removeEventListener('touchend', onTouchEnd);
             if (requestRef.current) cancelAnimationFrame(requestRef.current);
             if (containerRef.current && renderer.domElement.parentNode === containerRef.current) {
                 containerRef.current.removeChild(renderer.domElement);

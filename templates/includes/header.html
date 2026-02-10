@@ -36,10 +36,50 @@ function scrollToSection(sectionId) {
     if (element) {
         element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+    closeMenu();
 }
 
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    closeMenu();
+}
+
+// Mobile menu toggle
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    const navToggle = document.getElementById('nav-toggle');
+    if (navLinks) {
+        navLinks.classList.toggle('active');
+        navToggle.classList.toggle('active');
+    }
+}
+
+function closeMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    const navToggle = document.getElementById('nav-toggle');
+    if (navLinks) {
+        navLinks.classList.remove('active');
+        navToggle.classList.remove('active');
+    }
+}
+
+// Close menu when clicking outside
+document.addEventListener('click', function(event) {
+    const navLinks = document.querySelector('.nav-links');
+    const navToggle = document.getElementById('nav-toggle');
+    const navContainer = document.querySelector('.nav-container');
+    
+    if (navLinks && navToggle && navContainer) {
+        if (!navContainer.contains(event.target)) {
+            closeMenu();
+        }
+    }
+});
+
+// Toggle menu on hamburger click
+const navToggle = document.getElementById('nav-toggle');
+if (navToggle) {
+    navToggle.addEventListener('click', toggleMenu);
 }
 
 // Mise à jour de la navigation active au scroll
